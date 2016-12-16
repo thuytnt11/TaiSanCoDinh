@@ -7,3 +7,13 @@ E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.dll
 E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.dll
 E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.xml
 E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\PUB.dll.config
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\PUB.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\PUB.pdb
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\obj\Debug\PUB.csprojResolveAssemblyReference.cache
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\obj\Debug\PUB.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\PUB\obj\Debug\PUB.pdb

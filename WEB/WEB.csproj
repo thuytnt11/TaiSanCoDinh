@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -192,16 +194,59 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\CHITIETPHIEUGIAO.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DONVI.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DONVITINH.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LOAITHIETBI.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NHACUNGCAP.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PHIEUGIAO.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PHIEUNHAP.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PHONGQUANTRI.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\THIETBI.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TINHTRANG.cs">
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TSCDmodel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSCDmodel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TSCDmodel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSCDmodel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TSCDmodel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TSCDmodel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -228,12 +273,29 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\TSCDmodel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TSCDmodel.edmx</DependentUpon>
+      <LastGenOutput>TSCDmodel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\TSCDmodel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TSCDmodel.edmx</DependentUpon>
+      <LastGenOutput>TSCDmodel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\TSCDmodel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TSCDmodel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\TSCDmodel.edmx.diagram">
+      <DependentUpon>TSCDmodel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -244,6 +306,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\phantrang.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -259,6 +322,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\LayOut\HomeLayOut.cshtml" />
+    <Content Include="Views\Home\NCCview.cshtml" />
+    <Content Include="Views\Home\DONVIview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -270,6 +335,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

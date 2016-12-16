@@ -12,3 +12,17 @@ E:\TaiSanCoDinh\BUS\obj\Debug\BUS.pdb
 E:\TaiSanCoDinh\BUS\bin\Debug\BUS.dll.config
 E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.dll
 E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\BUS.dll.config
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\BUS.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\BUS.pdb
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\DAL.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\PUB.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\DAL.pdb
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\PUB.pdb
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\obj\Debug\BUS.dll
+C:\Users\hongtieunhu\Desktop\TaiSanCoDinh\BUS\obj\Debug\BUS.pdb

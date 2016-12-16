@@ -78,7 +78,7 @@ body {
 	background: url(../images/bg-nav-left-selected.gif) no-repeat top left;
 }
 #header .article {
-	background: #fff;
+	background: #4C8F96;
 	border: 2px solid #5fb3bd;
 	border-radius: 4px;
 	margin: 50px auto 28px;
@@ -600,4 +600,17 @@ body {
 }
 #footer div .connect #pinterest:hover {
 	background-position: -25px -107px;
+}
+.pg-normal {
+       color: red;
+       font-weight: normal;
+       text-decoration: none;  
+       cursor: pointer;  
+}
+
+.pg-selected {
+       color: red;
+       font-weight: normal;     
+       text-decoration: none;
+       cursor: pointer;
 }

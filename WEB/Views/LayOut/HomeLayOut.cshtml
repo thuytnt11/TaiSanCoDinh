@@ -18,33 +18,27 @@
                 <a href="index.html">TSCD</a>
             </div>
             <ul>
-                <li class="selected">
-                    <a href="index.html">HOME</a>
-                </li>
-                <li>
-                    <a href="about.html">Nhập</a>
-                </li>
-                <li>
-                    <a href="hairstyle.html">Xuất</a>
-                </li>
-                <li>
-                    <a href="hairstyle.html">HELP</a>
-                </li>
-                <li>
-                    <a href="hairstyle.html">ABOUT</a>
-                </li>
+                <li><a href="#">Nhà CC</a></li>
+                <li><a href="#">Đơn Vị</a></li>
+                
             </ul>
+            
         </div>
+        @*Danh sách nhà cung cấp và đơn vị*@
         <div class="article">
-            <table align="center" width="980" height="500">
-                <tr>
-                    <td align="center">
-                        Trần Ngọc Thùy
+            <table align="center" width="480" height="500">
+              <tr>
+                    <td valign ="top" align="left" style="border: 2px solid; background-color:#fff">
+                        @Html.Action("NCCview","Home")    
                     </td>
+                    <td valign="top" align="right" style="border: 2px solid; background-color:#fff" >
+                        @Html.Action("DONVIview", "Home")
+                    </td>
+
                 </tr>
             </table>
         </div>
-    </div>
+       </div>
    
     <div id="footer">
         <div>
