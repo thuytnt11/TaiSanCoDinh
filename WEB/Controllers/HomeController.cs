@@ -25,5 +25,6 @@ namespace WEB.Controllers
             var y = db.DONVIs.ToList();
             return PartialView(y);
         }
+		//ghi chú
     }
 }
