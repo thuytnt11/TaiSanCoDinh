@@ -1,0 +1,12 @@
+E:\TaiSanCoDinh\DAL\bin\Debug\DAL.dll.config
+E:\TaiSanCoDinh\DAL\bin\Debug\DAL.dll
+E:\TaiSanCoDinh\DAL\bin\Debug\DAL.pdb
+E:\TaiSanCoDinh\DAL\bin\Debug\EntityFramework.dll
+E:\TaiSanCoDinh\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\TaiSanCoDinh\DAL\bin\Debug\PUB.dll
+E:\TaiSanCoDinh\DAL\bin\Debug\PUB.pdb
+E:\TaiSanCoDinh\DAL\bin\Debug\EntityFramework.xml
+E:\TaiSanCoDinh\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\TaiSanCoDinh\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\TaiSanCoDinh\DAL\obj\Debug\DAL.dll
+E:\TaiSanCoDinh\DAL\obj\Debug\DAL.pdb

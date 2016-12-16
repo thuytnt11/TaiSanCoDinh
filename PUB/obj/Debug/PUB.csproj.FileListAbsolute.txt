@@ -1,0 +1,9 @@
+E:\TaiSanCoDinh\PUB\bin\Debug\PUB.dll
+E:\TaiSanCoDinh\PUB\bin\Debug\PUB.pdb
+E:\TaiSanCoDinh\PUB\obj\Debug\PUB.dll
+E:\TaiSanCoDinh\PUB\obj\Debug\PUB.pdb
+E:\TaiSanCoDinh\PUB\bin\Debug\PUB.dll.config
+E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.dll
+E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.dll
+E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.xml
+E:\TaiSanCoDinh\PUB\bin\Debug\EntityFramework.SqlServer.xml

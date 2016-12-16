@@ -1,0 +1,14 @@
+E:\TaiSanCoDinh\BUS\bin\Debug\BUS.dll
+E:\TaiSanCoDinh\BUS\bin\Debug\BUS.pdb
+E:\TaiSanCoDinh\BUS\bin\Debug\DAL.dll
+E:\TaiSanCoDinh\BUS\bin\Debug\PUB.dll
+E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.dll
+E:\TaiSanCoDinh\BUS\bin\Debug\DAL.pdb
+E:\TaiSanCoDinh\BUS\bin\Debug\PUB.pdb
+E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.xml
+E:\TaiSanCoDinh\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\TaiSanCoDinh\BUS\obj\Debug\BUS.dll
+E:\TaiSanCoDinh\BUS\obj\Debug\BUS.pdb
+E:\TaiSanCoDinh\BUS\bin\Debug\BUS.dll.config
+E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.dll
+E:\TaiSanCoDinh\BUS\bin\Debug\EntityFramework.SqlServer.xml

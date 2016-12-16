@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mdtscd" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="THIETBI">
+    <Key>
+      <PropertyRef Name="mathietbi" />
+    </Key>
+    <Property Name="mathietbi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenthietbi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="dongia" Type="Int32" />
+    <Property Name="thongsokythuat" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ngaysanxuat" Type="DateTime" Precision="3" />
+    <Property Name="ngayduavaosudung" Type="DateTime" Precision="3" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="madonvitinh" Type="Int32" />
+    <Property Name="maloai" Type="Int32" />
+    <Property Name="maphongquantrithietbi" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="tscdenti" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="THIETBIs" EntityType="Self.THIETBI" />
+  </EntityContainer>
+</Schema>

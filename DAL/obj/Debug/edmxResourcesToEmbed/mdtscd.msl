@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mdtscdStoreContainer" CdmEntityContainer="tscdenti">
+    <EntitySetMapping Name="THIETBIs">
+      <EntityTypeMapping TypeName="mdtscd.THIETBI">
+        <MappingFragment StoreEntitySet="THIETBI">
+          <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
+          <ScalarProperty Name="tenthietbi" ColumnName="tenthietbi" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="thongsokythuat" ColumnName="thongsokythuat" />
+          <ScalarProperty Name="ngaysanxuat" ColumnName="ngaysanxuat" />
+          <ScalarProperty Name="ngayduavaosudung" ColumnName="ngayduavaosudung" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="madonvitinh" ColumnName="madonvitinh" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="maphongquantrithietbi" ColumnName="maphongquantrithietbi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
