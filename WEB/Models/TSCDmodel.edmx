@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TSCDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TSCDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CHITIETPHIEUGIAO">
           <Key>
             <PropertyRef Name="mathietbi" />
@@ -18,7 +18,7 @@
           <Key>
             <PropertyRef Name="madonvi" />
           </Key>
-          <Property Name="madonvi" Type="int" Nullable="false" />
+          <Property Name="madonvi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tendonvi" Type="nvarchar" MaxLength="50" />
           <Property Name="ghichu" Type="nvarchar" MaxLength="200" />
         </EntityType>
@@ -26,21 +26,21 @@
           <Key>
             <PropertyRef Name="madonvitinh" />
           </Key>
-          <Property Name="madonvitinh" Type="int" Nullable="false" />
+          <Property Name="madonvitinh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tendonvitinh" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="LOAITHIETBI">
           <Key>
             <PropertyRef Name="maloai" />
           </Key>
-          <Property Name="maloai" Type="int" Nullable="false" />
+          <Property Name="maloai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tenloai" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="NHACUNGCAP">
           <Key>
             <PropertyRef Name="manhacungcap" />
           </Key>
-          <Property Name="manhacungcap" Type="int" Nullable="false" />
+          <Property Name="manhacungcap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tennhacungcap" Type="nvarchar" MaxLength="50" />
           <Property Name="diachi" Type="nvarchar" MaxLength="50" />
           <Property Name="sdt" Type="nvarchar" MaxLength="11" />
@@ -49,7 +49,7 @@
           <Key>
             <PropertyRef Name="maphieugiao" />
           </Key>
-          <Property Name="maphieugiao" Type="int" Nullable="false" />
+          <Property Name="maphieugiao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ngaygiao" Type="datetime" />
           <Property Name="daky" Type="int" />
           <Property Name="tinhtrang" Type="nvarchar" MaxLength="50" />
@@ -60,7 +60,7 @@
           <Key>
             <PropertyRef Name="maphieunhap" />
           </Key>
-          <Property Name="maphieunhap" Type="int" Nullable="false" />
+          <Property Name="maphieunhap" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ngaynhap" Type="datetime" />
           <Property Name="manhacungcap" Type="int" />
           <Property Name="mathietbi" Type="int" Nullable="false" />
@@ -104,7 +104,7 @@
           <Key>
             <PropertyRef Name="matinhtrang" />
           </Key>
-          <Property Name="matinhtrang" Type="int" Nullable="false" />
+          <Property Name="matinhtrang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tentinhtrang" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <Association Name="FK_CHITIETPHIEUGIAO_PHIEUGIAO">
@@ -280,8 +280,7 @@
             <End Role="THIETBI" EntitySet="THIETBI" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TSCDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

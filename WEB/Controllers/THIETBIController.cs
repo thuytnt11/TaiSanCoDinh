@@ -7,13 +7,14 @@ using WEB.Models;
 
 namespace WEB.Controllers
 {
-    public class HomeController : Controller
+    public class THIETBIController : Controller
     {
-        // GET: Home
+        // GET: THIETBI
         TSCDEntities db = new TSCDEntities();
-        public ActionResult Index()
+        public ActionResult THIETBIview()
         {
-            return View();
+            var y = db.THIETBIs.ToList();
+            return PartialView(y);
         }
     }
 }

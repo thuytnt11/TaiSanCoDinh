@@ -1,6 +1,8 @@
-﻿@using WEB.Models;
-@model List<DONVI>
-
+﻿
+@using WEB.Models;
+@model List<THIETBI>
+@{TSCDEntities db = new TSCDEntities();
+    }
 <script type="text/javascript">
 //<![CDATA[
 function Pager1(tableName1, itemsPerPage1) {
@@ -72,32 +74,79 @@ function Pager1(tableName1, itemsPerPage1) {
 }
 //]]>
 </script> @*Script phân trang*@
-
-<table id="DONVI" align="center" border="1" width="430" style="border-color:#0094ff; border-radius: 4px; overflow:auto">
-    <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH CÁC ĐƠN VỊ</b></h2></tr>
+<script>
+$(function()
+{
+    var table=$("#THIETBI");
+    $("#searchBoxthietbi").keyup(function()
+    {
+        var keyword=this.value;
+        $("tr:gt(0)",table).each(function()
+        {
+            if($(this).text().search(keyword)>-1)
+                $(this).show();
+            else
+                $(this).hide();
+        });
+    });
+});
+</script> @*@Script Lọc *@
+<table id="THIETBI" align="center" border="1" width="936" style="border-color:#0094ff; border-radius: 4px; overflow:auto">
+    <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH THIẾT BỊ</b></h2></tr>
+    <tr>
+        <div align="center">
+            <b>Lọc</b> <input id="searchBoxthietbi" type="text" />
+        </div>
+    </tr>
+    <tr><hr /></tr>
     <tr style="background-color:#4C8F96; color:aliceblue">
-        <td align="center">Mã</td>
-        <td align="center">Tên</td>
-        <td align="center">Ghi Chú</td>
+        <td align="center">Mã thiết bị</td>
+        <td align="center">Tên thiết bị</td>
+        <td align="center">Đơn giá</td>
+        <td align="center">Thông sô kỹ thuật</td>
+        <td align="center">Ngày sản xuất </td>
+        <td align="center">Ngày đưa vào sử dụng</td>
+        <td align="center">Ngày cập nhật </td>
+        <td align="center">Số lượng </td>
+        <td align="center">Đơn vị tính </td>
+        <td align="center">Loại</td>
+        <td align="center">Phòng quản trị</td>
+        <td align="center">Tình trạng</td>
+        <td align="center">Thao tác</td>
     </tr>
     @{
         foreach (var item in Model)
         {
-
             <tr>
-                <td>@item.madonvi</td>
-                <td>@item.tendonvi</td>
-                <td>@item.ghichu</td>
+                <td align="center">@item.mathietbi</td>
+                <td align="center">@item.tenthietbi</td>
+                <td align="center">@item.dongia</td>
+                <td align="center">@item.thongsokythuat</td>
+                <td align="center">@item.ngaysanxuat</td>
+                <td align="center">@item.ngayduavaosudung</td>
+                <td align="center">@item.ngaycapnhat</td>
+                <td align="center">@item.soluong</td>
+                <td align="center">@item.madonvitinh</td>
+                <td align="center">@item.maloai</td>
+                <td align="center">@item.maphongquantri</td>
+                <td align="center">@item.matinhtrang</td>
+                <td align="center">
+                    <a href="#" class="buttonPro small green">Nhập</a>
+                    <a href="#" class="buttonPro small red">Trả</a>
+                    <a href="#" class="buttonPro small blue">Xuất</a>
+                </td>
             </tr>
         }
     }
 </table>
 <div id="pageNavPosition1" align="center" style="margin-top:10px;"></div>
 <script type="text/javascript">
-       var pager1 = new Pager1('DONVI', 11);
+       var pager1 = new Pager1('THIETBI', 12);
        pager1.init1();
        pager1.showPage1Nav('pager1', 'pageNavPosition1');
        pager1.showPage1(1);
 </script> @*Phân trang*@
 
-   
+
+
+

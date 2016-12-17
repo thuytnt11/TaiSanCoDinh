@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <link href="~/Content/CSS/buttonPro.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
 </head>
 <body>
     @RenderBody()
@@ -18,23 +20,23 @@
                 <a href="index.html">TSCD</a>
             </div>
             <ul>
-                <li><a href="#">Nhà CC</a></li>
-                <li><a href="#">Đơn Vị</a></li>
-                
+               <h2>XÂY DỰNG PHẦN MỀM THEO MÔ HÌNH PHÂN LỚP</h2> 
             </ul>
             
         </div>
         @*Danh sách nhà cung cấp và đơn vị*@
         <div class="article">
-            <table align="center" width="480" height="500">
+            <table align="center" width="936" height="500">
               <tr>
-                    <td valign ="top" align="left" style="border: 2px solid; background-color:#fff">
-                        @Html.Action("NCCview","Home")    
+                    @*<td valign ="top" align="left" style="border: 2px solid; background-color:#fff">
+                        @Html.Action("NCCview","NCC")    
                     </td>
                     <td valign="top" align="right" style="border: 2px solid; background-color:#fff" >
-                        @Html.Action("DONVIview", "Home")
-                    </td>
-
+                        @Html.Action("DONVIview", "DONVI")
+                    </td>*@
+                  <td valign="top" align="center" style="border: 2px solid; background-color: #fff;">
+                      @Html.Action("THiETBIview", "THIETBI")
+                  </td>
                 </tr>
             </table>
         </div>

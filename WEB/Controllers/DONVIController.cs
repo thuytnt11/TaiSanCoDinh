@@ -7,13 +7,14 @@ using WEB.Models;
 
 namespace WEB.Controllers
 {
-    public class HomeController : Controller
+    public class DONVIController : Controller
     {
-        // GET: Home
+        // GET: DONVI
         TSCDEntities db = new TSCDEntities();
-        public ActionResult Index()
+        public ActionResult DONVIview()
         {
-            return View();
+            var y = db.DONVIs.ToList();
+            return PartialView(y);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿@using WEB.Models;
+﻿
+@using WEB.Models;
 @model List<NHACUNGCAP>
 
 <script type="text/javascript">
@@ -62,25 +63,47 @@ function Pager(tableName, itemsPerPage) {
           }
           var element = document.getElementById(positionId);
 
-          var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal"> &#171 Prev </span> | ';
+          var pagerHtml = '<span onclick="' + pagerName + '.prev();" class="pg-normal"> &#171 Trước </span> | ';
         for (var page = 1; page <= this.pages; page++)
             pagerHtml += '<span id="pg' + page + '" class="pg-normal" onclick="' + pagerName + '.showPage(' + page + ');">' + page + '</span> | ';
-        pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal"> Next &#187;</span>';
+        pagerHtml += '<span onclick="'+pagerName+'.next();" class="pg-normal"> Sau &#187;</span>';
 
         element.innerHTML = pagerHtml;
     }
 }
 //]]>
 </script> @*Script phân trang*@
-
+<script>
+$(function()
+{
+    var table=$("#NCC");
+    $("#searchBoxncc").keyup(function()
+    {
+        var keyword=this.value;
+        $("tr:gt(0)",table).each(function()
+        {
+            if($(this).text().search(keyword)>-1)
+                $(this).show();
+            else
+                $(this).hide();
+        });
+    });
+});
+</script> @*@Script Lọc *@
 <table id="NCC" align="center" border="1" width="450" style="border-color:#0094ff; border-radius: 4px; overflow:auto;">
     <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH NHÀ CUNG CẤP</b></h2></tr>
-    <tr></tr>
+    <tr>
+        <div align="center">
+                <b>Lọc</b> <input type="text" id="searchBoxncc" />
+        </div>
+    </tr>
+    <tr><hr /></tr>
     <tr style="background-color:#4C8F96; color:aliceblue">
         <td align="center">Mã </td>
         <td align="center">Tên</td>
         <td align="center">Địa chỉ </td>
         <td align="center">SĐT</td>
+        <td align="center">Thao tác</td>
     </tr>
     @{
         foreach (var item in Model)
@@ -91,8 +114,9 @@ function Pager(tableName, itemsPerPage) {
                 <td>@item.tennhacungcap</td>
                 <td>@item.diachi</td>
                 <td>@item.sdt</td>
+                <td align="center"><a href="#" class="buttonPro small green">Nhập</a></td>
             </tr>
-        }
+            }
     }
 </table>
 <div id="pageNavPosition" align="center" style="margin-top:10px;"></div>

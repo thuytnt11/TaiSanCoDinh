@@ -195,7 +195,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DONVIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NCCController.cs" />
+    <Compile Include="Controllers\THIETBIController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -253,6 +256,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CSS\buttonPro.css" />
     <Content Include="Content\CSS\style.css" />
     <Content Include="Content\images\bg-featured.png" />
     <Content Include="Content\images\bg-figure.png" />
@@ -301,6 +305,7 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -322,8 +327,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\LayOut\HomeLayOut.cshtml" />
-    <Content Include="Views\Home\NCCview.cshtml" />
-    <Content Include="Views\Home\DONVIview.cshtml" />
+    <Content Include="Views\NCC\NCCview.cshtml" />
+    <Content Include="Views\DONVI\DONVIview.cshtml" />
+    <Content Include="Views\THIETBI\THIETBIview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
