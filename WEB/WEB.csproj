@@ -198,7 +198,8 @@
     <Compile Include="Controllers\DONVIController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NCCController.cs" />
-    <Compile Include="Controllers\THIETBIController.cs" />
+    <Compile Include="Controllers\NHAPMOIController.cs" />
+    <Compile Include="Controllers\NHAPTHEMController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -326,10 +327,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\LayOut\HomeLayOut.cshtml" />
     <Content Include="Views\NCC\NCCview.cshtml" />
     <Content Include="Views\DONVI\DONVIview.cshtml" />
-    <Content Include="Views\THIETBI\THIETBIview.cshtml" />
+    <Content Include="Views\NHAPTHEM\NHAPTHEMview.cshtml" />
+    <Content Include="Views\LayOut\INDEXLayOut.cshtml" />
+    <Content Include="Views\NHAPMOI\NHAPMOIview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,8 +1,19 @@
-﻿
+﻿@{
+    Layout = null;
+}
 @using WEB.Models;
 @model List<NHACUNGCAP>
+<!DOCTYPE html>
 
-<script type="text/javascript">
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/CSS/style.css" rel="stylesheet" />
+    <link href="~/Content/CSS/buttonPro.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript">
 //<![CDATA[
 function Pager(tableName, itemsPerPage) {
     this.tableName = tableName;
@@ -72,8 +83,8 @@ function Pager(tableName, itemsPerPage) {
     }
 }
 //]]>
-</script> @*Script phân trang*@
-<script>
+    </script> @*Script phân trang*@
+    <script>
 $(function()
 {
     var table=$("#NCC");
@@ -89,40 +100,75 @@ $(function()
         });
     });
 });
-</script> @*@Script Lọc *@
-<table id="NCC" align="center" border="1" width="450" style="border-color:#0094ff; border-radius: 4px; overflow:auto;">
-    <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH NHÀ CUNG CẤP</b></h2></tr>
-    <tr>
-        <div align="center">
-                <b>Lọc</b> <input type="text" id="searchBoxncc" />
-        </div>
-    </tr>
-    <tr><hr /></tr>
-    <tr style="background-color:#4C8F96; color:aliceblue">
-        <td align="center">Mã </td>
-        <td align="center">Tên</td>
-        <td align="center">Địa chỉ </td>
-        <td align="center">SĐT</td>
-        <td align="center">Thao tác</td>
-    </tr>
-    @{
-        foreach (var item in Model)
-        {
+    </script> @*@Script Lọc *@
+</head>
+<body>
+    <div id="header">
+        <div class="section">
+            <div class="logo">
+                <a href="/HOME/">TSCD</a>
+            </div>
+            <ul>
+                <h2>XÂY DỰNG PHẦN MỀM THEO MÔ HÌNH PHÂN LỚP</h2>
+            </ul>
 
-            <tr>
-                <td>@item.manhacungcap</td>
-                <td>@item.tennhacungcap</td>
-                <td>@item.diachi</td>
-                <td>@item.sdt</td>
-                <td align="center"><a href="#" class="buttonPro small green">Nhập</a></td>
-            </tr>
-            }
-    }
-</table>
-<div id="pageNavPosition" align="center" style="margin-top:10px;"></div>
-<script type="text/javascript">
-       var pager = new Pager('NCC', 12);
-       pager.init();
-       pager.showPageNav('pager', 'pageNavPosition');
-       pager.showPage(1);
-</script> @*Phân trang*@
+        </div>
+        @*Danh sách nhà cung cấp và đơn vị*@
+        <div class="article">
+            <table align="center" width="936" height="500">
+                <tr>
+                    <td valign="top" align="center" style="border: 2px solid; background-color: #fff;">
+                        <table id="NCC" align="center" border="1" width="450" style="border-color:#0094ff; border-radius: 4px; overflow:auto;">
+                            <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH NHÀ CUNG CẤP</b></h2></tr>
+                            <tr>
+                                <div align="center">
+                                    <b>Lọc</b> <input type="text" id="searchBoxncc" />
+                                </div>
+                            </tr>
+                            <tr><hr /></tr>
+                            <tr style="background-color:#4C8F96; color:aliceblue">
+                                <td align="center">Mã </td>
+                                <td align="center">Tên</td>
+                                <td align="center">Địa chỉ </td>
+                                <td align="center">SĐT</td>
+                                <td align="center">Thao tác</td>
+                            </tr>
+                            @{
+                                foreach (var item in Model)
+                                {
+
+                                    <tr>
+                                        <td>@item.manhacungcap</td>
+                                        <td>@item.tennhacungcap</td>
+                                        <td>@item.diachi</td>
+                                        <td>@item.sdt</td>
+                                        <td align="center"><a href="#" class="buttonPro small green ">Nhập</a></td>
+                                    </tr>
+                                }
+                            }
+                        </table>
+                        <div id="pageNavPosition" align="center" style="margin-top:10px;"></div>
+                        <script type="text/javascript">
+                            var pager = new Pager('NCC', 12);
+                            pager.init();
+                            pager.showPageNav('pager', 'pageNavPosition');
+                            pager.showPage(1);
+                        </script> @*Phân trang*@
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div>
+            <div class="connect">
+                <b style="color:#ffffff">NHÓM 12</b>
+            </div>
+            <p>
+                XÂY DỰNG PHẦN MỀM THEO MÔ HÌNH PHÂN LỚP
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -15,19 +15,16 @@ namespace WEB.Controllers
         {
             return View();
         }
-<<<<<<< HEAD
-=======
-        public ActionResult NCCview()
-        {
-            var y = db.NHACUNGCAPs.ToList();
-            return PartialView(y);
-        }
-        public ActionResult DONVIview()
-        {
-            var y = db.DONVIs.ToList();
-            return PartialView(y);
-        }
+        //public ActionResult NCCview()
+        //{
+        //    var y = db.NHACUNGCAPs.ToList();
+        //    return PartialView(y);
+        //}
+        //public ActionResult DONVIview()
+        //{
+        //    var y = db.DONVIs.ToList();
+        //    return PartialView(y);
+        //}
 		//ghi chú
->>>>>>> origin/master
     }
 }
