@@ -329,9 +329,9 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\NCC\NCCview.cshtml" />
     <Content Include="Views\DONVI\DONVIview.cshtml" />
-    <Content Include="Views\NHAPTHEM\NHAPTHEMview.cshtml" />
     <Content Include="Views\LayOut\INDEXLayOut.cshtml" />
     <Content Include="Views\NHAPMOI\NHAPMOIview.cshtml" />
+    <Content Include="Views\NHAPTHEM\NHAPTHEMview.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

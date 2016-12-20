@@ -1,8 +1,7 @@
-﻿@{
+﻿
+@{
     Layout = null;
 }
-@using WEB.Models;
-@model List<THIETBI>
 
 <!DOCTYPE html>
 
@@ -13,94 +12,6 @@
     <link href="~/Content/CSS/style.css" rel="stylesheet" />
     <link href="~/Content/CSS/buttonPro.css" rel="stylesheet" />
     <script src="~/Scripts/jquery.min.js"></script>
-    <script type="text/javascript">
-//<![CDATA[
-function Pager1(tableName1, itemsPerPage1) {
-    this.tableName1 = tableName1;
-    this.itemsPerPage1 = itemsPerPage1;
-    this.currentPage1 = 1;
-    this.pages1 = 0;
-    this.init1ed1 = false;
-
-    this.showRecords1 = function(from, to) {
-        var rows = document.getElementById(tableName1).rows;
-        // i starts from 1 to skip table header row
-        for (var i = 1; i < rows.length; i++) {
-            if (i < from || i > to)
-                rows[i].style.display = 'none';
-            else
-                rows[i].style.display = '';
-        }
-    }
-
-    this.showPage1 = function(pageNumber1) {
-          if (! this.init1ed1) {
-                   alert("not init1ed1");
-                   return;
-          }
-        var oldPageAnchor1 = document.getElementById('pg'+this.currentPage1);
-        oldPageAnchor1.className = 'pg-normal';
-
-        this.currentPage1 = pageNumber1;
-        var newPageAnchor1 = document.getElementById('pg'+this.currentPage1);
-        newPageAnchor1.className = 'pg-selected';
-
-        var from = (pageNumber1 - 1) * itemsPerPage1 + 1;
-        var to = from + itemsPerPage1 - 1;
-        this.showRecords1(from, to);
-    }
-
-    this.prev1 = function() {
-        if (this.currentPage1 > 1)
-            this.showPage1(this.currentPage1 - 1);
-    }
-
-    this.next1 = function() {
-        if (this.currentPage1 < this.pages1) {
-            this.showPage1(this.currentPage1 + 1);
-        }
-    }
-
-    this.init1 = function() {
-        var rows1 = document.getElementById(tableName1).rows;
-        var records = (rows1.length - 1);
-        this.pages1 = Math.ceil(records / itemsPerPage1);
-        this.init1ed1 = true;
-    }
-    this.showPage1Nav = function(pagerName1, positionId1) {
-          if (! this.init1ed1) {
-                   alert("not inited1");
-                   return;
-          }
-          var element = document.getElementById(positionId1);
-
-          var pagerHtml1 = '<span onclick="' + pagerName1 + '.prev1();" class="pg-normal"> &#171 Trước </span> | ';
-        for (var page = 1; page <= this.pages1; page++)
-            pagerHtml1 += '<span id="pg' + page + '" class="pg-normal" onclick="' + pagerName1 + '.showPage1(' + page + ');">' + page + '</span> | ';
-        pagerHtml1 += '<span onclick="'+pagerName1+'.next1();" class="pg-normal"> Sau &#187;</span>';
-
-        element.innerHTML = pagerHtml1;
-    }
-}
-//]]>
-    </script> @*Script phân trang*@
-    <script>
-$(function()
-{
-    var table=$("#THIETBI");
-    $("#searchBoxthietbi").keyup(function()
-    {
-        var keyword=this.value;
-        $("tr:gt(0)",table).each(function()
-        {
-            if($(this).text().search(keyword)>-1)
-                $(this).show();
-            else
-                $(this).hide();
-        });
-    });
-});
-    </script> @*@Script Lọc *@
 
 </head>
 <body>
@@ -115,12 +26,31 @@ $(function()
 
         </div>
         <div class="article">
-            <table align="center" width="936" height="500">
-                <tr>
-                    <td valign="top" align="center" style="border: 2px solid; background-color: #fff;">
-                        <table id="THIETBI" align="center" border="1" width="936" style="border-color:#0094ff; border-radius: 4px; overflow:auto">
+            <table align="center" width="936">
+                <tr align="center">
+                    <td valign="top" align="center" style=" background-color: #fff; display:normal" id="THIETBI">
+                        @using WEB.Models;
+                        @model List<THIETBI>
+                        <table align="center" border="1" width="936" style="border-color:#0094ff; border-radius: 4px; overflow:auto;">
                             <tr><h2 align="center"><b style="color:#212740;">DANH SÁCH THIẾT BỊ</b></h2></tr>
                             <tr>
+                                <script>
+                                        $(function()
+                                        {
+                                            var table=$("#THIETBI");
+                                            $("#searchBoxthietbi").keyup(function()
+                                            {
+                                                var keyword=this.value;
+                                                $("tr:gt(0)",table).each(function()
+                                                {
+                                                    if($(this).text().search(keyword)>-1)
+                                                        $(this).show();
+                                                    else
+                                                        $(this).hide();
+                                                });
+                                            });
+                                        });
+                                </script> @*@Script Lọc *@
                                 <div align="center">
                                     <b>Lọc</b> <input id="searchBoxthietbi" type="text" />
                                 </div>
@@ -141,6 +71,7 @@ $(function()
                                 <td align="center">Tình trạng</td>
                                 <td align="center">Thao tác</td>
                             </tr>
+
                             @{
                                 foreach (var item in Model)
                                 {
@@ -158,23 +89,33 @@ $(function()
                                         <td align="center">@item.maphongquantri</td>
                                         <td align="center">@item.matinhtrang</td>
                                         <td align="center">
-                                            <a href="/NCC/NCCview" class="buttonPro small green " style="width:30px;">Nhập</a>
-                                            <a href="#" class="buttonPro small red " style="width:30px;">Trả</a>
-                                            <a href="/DONVI/DONVIview" class="buttonPro small blue" style="width:60px;">Xuất</a>
+                                            <a href="#" class="buttonPro small green " style="width:30px;" onclick="hidetable()">Nhập</a>
                                         </td>
                                     </tr>
                                 }
                             }
-                        </table>
-                        <div id="pageNavPosition1" align="center" style="margin-top:10px;"></div>
-                        <script type="text/javascript">
-                            var pager1 = new Pager1('THIETBI', 12);
-                            pager1.init1();
-                            pager1.showPage1Nav('pager1', 'pageNavPosition1');
-                            pager1.showPage1(1);
-                        </script> @*Phân trang*@
+                        </table> @*Table Thiết bị*@
+                    </td>
+                    <td valign="top" align="center" style=" background-color: #fff; display:normal" id="NCC">
+                        @Html.Action("NCCview", "NCC");
                     </td>
                 </tr>
+                <script>
+                            function hidetable() {
+                                var elem = document.getElementById("THIETBI");
+                                var hide = elem.style.display == "none";
+                                var elem1 = document.getElementById("NCC");
+                                var hide1 = elem.style.display == "none";
+                                if (hide && hide1) {
+                                    elem.style.display = "table";
+                                    elem1.style.display = "none";
+                                }
+                                else {
+                                    elem.style.display = "none";
+                                    elem1.style.display = "table";
+                                }
+                            }
+                </script>
             </table>
         </div>
     </div>
