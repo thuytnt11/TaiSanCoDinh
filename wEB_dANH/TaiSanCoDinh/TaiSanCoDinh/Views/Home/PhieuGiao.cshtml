@@ -1,0 +1,182 @@
+﻿@model IEnumerable<TaiSanCoDinh.Models.PHIEUGIAO>
+@{
+    ViewBag.Title = "PhieuGiao";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    function themthietbi()
+    {
+        var mathietbi = document.getElementById("thietbi").value;
+        var soluong = Number(document.getElementById("soluong1").value);
+        var tenthietbi = document.getElementById("thietbi").value;
+        var arr = mathietbi.split(";");
+        var rows = "";
+        rows += "<td>"
+            + "<input type='button' onclick='xoadong(this)' value='Xóa'>" + "</td><td>"
+        + arr[0] + "<input type='hidden' name='mathietbi' value='" + arr[0] + "'>" + "</td><td>"
+        + arr[1] + "<input type='hidden' name='tenthietbi' value='" + arr[1] + "'>" + "</td><td>"
+        + soluong + "<input type='hidden' name='soluong' value='" + soluong + "'>" + "</td><td>";
+        
+        var tbody = document.querySelector("#temp tbody");
+        var tr = document.createElement("tr");
+        tr.innerHTML = rows;
+        tbody.appendChild(tr);
+    }
+    function xoadong(r) {
+        var hoi = confirm("Bạn có chắc chắn muốn xóa?");
+        if (hoi == true) {
+            var i = r.parentNode.parentNode.rowIndex;
+           
+            document.getElementById("temp").deleteRow(i);
+            for (var j = i; j < table.rows.length; j++) {
+                table.rows[j].cells[0].firstChild.innerHTML = j - 1;
+            }
+        }
+    }
+
+</script>
+
+<div id="TieuDe">
+    <h1 style="text-align:center">Quản Lí Xuất Thiết Bị</h1>
+</div>
+<div id="PhieuNhap">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Tạo Phiếu Xuất
+    </button>
+    @Html.ValidationSummary()
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Phiếu Giao</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    @using (Html.BeginForm("phieugiao", "Home", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label>Thiết Bị Cần Giao</label>
+                            <select id="thietbi" class="form-control">
+                                @foreach(TaiSanCoDinh.Models.THIETBI a in ViewBag.ThietBi)                                
+                                {
+                                    <option value="@a.mathietbi;@a.tenthietbi">@a.tenthietbi</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label> Ngày Giao</label>
+                            <input type="date" name="ngaygiao" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <label>Mã Phòng Quản Trị</label>
+                            @Html.DropDownList("maphongquantri", null, new { @class = "form-control", @id="maphongquantri" })
+                        </div>
+                        <div class="form-group">
+                            <label>Đơn Vị</label>
+                            @Html.DropDownList("madonvi", null, new { @class = "form-control" , @id="madonvi" })
+                        </div>
+                        <div class="form-group">
+                            <label>Số Lượng</label>
+                            <input type="text" name="soluong1" class="form-control" id="soluong1"/>
+                        </div>
+                        //nut them vao chi tiet
+                        <button type="button" class="btn btn-default" onclick="themthietbi()">Thêm</button>
+                        <h4>Thông tin phiếu giao</h4>
+                        <table id="temp" class="table table-responsive" >
+                            <thead>
+                                <tr>
+                                    <th>Xóa</th>
+                                    <th>Mã Thiết Bị</th>
+                                    <th>Tên Thiết Bị</th>
+                                    <th>Số Lượng</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            <button type="submit" class="btn btn-primary">Giao Thiết Bị</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div id="ThietBiDaNhap">
+    <div class="col-lg-8" style="border-right:double">
+        <h4>Lịch Sử Giao</h4>
+        <table class="table table-responsive">
+            <tr>
+                <th> Mã Phiếu Giao</th>
+                <th> Ngày Giao</th>
+                <th>Tình Trạng Duyệt</th>
+                <th>Trạng Thái Sản Phẩm</th>
+                <th>Đơn Vị Quản Trị</th>
+                <th>Đơn Vị Nhận<th>
+                @*<th>***</th>*@
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.maphieugiao</td>
+                    <td>@Html.FormatValue(i.ngaygiao, "{0:dd/MM/yyyy}")</td>
+                    <td>@i.daky</td>
+                    <td>@i.tinhtrang</td>
+                    @if(i.PHONGQUANTRI !=null )
+                    {
+                        <td>@i.PHONGQUANTRI.tenphongquantri</td>
+                    }
+                    else
+                    {
+                        <td>
+                            Không có
+                        </td>
+                    }
+                    
+                    @if(i.DONVI != null)
+                    {
+                         <td>@i.DONVI.tendonvi</td>
+                    }
+                   else
+                    {
+                        <td>Không có</td>
+                    }
+                    
+                    <td>
+                        <a href="/Home/ChiTiet/@i.maphieugiao">Chi Tiết</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="col-lg-4">
+
+        <h4>Thiết bị hiện có</h4>
+        <table class="table table-responsive">
+            <tr>
+                <th> Mã Thiết Bị</th>
+                <th> Tên Thiết Bị</th>
+                <th>Số Lượng</th>
+            </tr>
+            @foreach (TaiSanCoDinh.Models.THIETBI i in ViewBag.ThietBi)
+            {
+                <tr>
+                    <td>@i.mathietbi</td>
+                    <td>@i.tenthietbi</td>
+                    <td>@i.soluong</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
+

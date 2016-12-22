@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TSCDModelStoreContainer" CdmEntityContainer="TSCDEntities3">
+    <EntitySetMapping Name="CHITIETPHIEUGIAO">
+      <EntityTypeMapping TypeName="TSCDModel.CHITIETPHIEUGIAO">
+        <MappingFragment StoreEntitySet="CHITIETPHIEUGIAO">
+          <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
+          <ScalarProperty Name="maphieugiao" ColumnName="maphieugiao" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONVI">
+      <EntityTypeMapping TypeName="TSCDModel.DONVI">
+        <MappingFragment StoreEntitySet="DONVI">
+          <ScalarProperty Name="madonvi" ColumnName="madonvi" />
+          <ScalarProperty Name="tendonvi" ColumnName="tendonvi" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DONVITINH">
+      <EntityTypeMapping TypeName="TSCDModel.DONVITINH">
+        <MappingFragment StoreEntitySet="DONVITINH">
+          <ScalarProperty Name="madonvitinh" ColumnName="madonvitinh" />
+          <ScalarProperty Name="tendonvitinh" ColumnName="tendonvitinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOAITHIETBI">
+      <EntityTypeMapping TypeName="TSCDModel.LOAITHIETBI">
+        <MappingFragment StoreEntitySet="LOAITHIETBI">
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="tenloai" ColumnName="tenloai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHACUNGCAP">
+      <EntityTypeMapping TypeName="TSCDModel.NHACUNGCAP">
+        <MappingFragment StoreEntitySet="NHACUNGCAP">
+          <ScalarProperty Name="manhacungcap" ColumnName="manhacungcap" />
+          <ScalarProperty Name="tennhacungcap" ColumnName="tennhacungcap" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUGIAO">
+      <EntityTypeMapping TypeName="TSCDModel.PHIEUGIAO">
+        <MappingFragment StoreEntitySet="PHIEUGIAO">
+          <ScalarProperty Name="maphieugiao" ColumnName="maphieugiao" />
+          <ScalarProperty Name="ngaygiao" ColumnName="ngaygiao" />
+          <ScalarProperty Name="daky" ColumnName="daky" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+          <ScalarProperty Name="maphongquantri" ColumnName="maphongquantri" />
+          <ScalarProperty Name="madonvi" ColumnName="madonvi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUNHAP">
+      <EntityTypeMapping TypeName="TSCDModel.PHIEUNHAP">
+        <MappingFragment StoreEntitySet="PHIEUNHAP">
+          <ScalarProperty Name="maphieunhap" ColumnName="maphieunhap" />
+          <ScalarProperty Name="ngaynhap" ColumnName="ngaynhap" />
+          <ScalarProperty Name="manhacungcap" ColumnName="manhacungcap" />
+          <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="madonvi" ColumnName="madonvi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHONGQUANTRI">
+      <EntityTypeMapping TypeName="TSCDModel.PHONGQUANTRI">
+        <MappingFragment StoreEntitySet="PHONGQUANTRI">
+          <ScalarProperty Name="maphongquantri" ColumnName="maphongquantri" />
+          <ScalarProperty Name="tenphongquantri" ColumnName="tenphongquantri" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="TSCDModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINHTRANG">
+      <EntityTypeMapping TypeName="TSCDModel.TINHTRANG">
+        <MappingFragment StoreEntitySet="TINHTRANG">
+          <ScalarProperty Name="matinhtrang" ColumnName="matinhtrang" />
+          <ScalarProperty Name="tentinhtrang" ColumnName="tentinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THIETBI">
+      <EntityTypeMapping TypeName="TSCDModel.THIETBI">
+        <MappingFragment StoreEntitySet="THIETBI">
+          <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
+          <ScalarProperty Name="tenthietbi" ColumnName="tenthietbi" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="thongsokythuat" ColumnName="thongsokythuat" />
+          <ScalarProperty Name="ngaysanxuat" ColumnName="ngaysanxuat" />
+          <ScalarProperty Name="ngayduavaosudung" ColumnName="ngayduavaosudung" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="madonvitinh" ColumnName="madonvitinh" />
+          <ScalarProperty Name="maloai" ColumnName="maloai" />
+          <ScalarProperty Name="maphongquantri" ColumnName="maphongquantri" />
+          <ScalarProperty Name="matinhtrang" ColumnName="matinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
