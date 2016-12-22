@@ -1,0 +1,140 @@
+﻿@model IEnumerable<TaiSanCoDinh.Models.PHIEUNHAP>
+@{
+    ViewBag.Title = "PhieuNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<script>
+    function luachon1() {
+        var luachon = document.getElementById("chonnhacungcap").value;
+        var temp = document.getElementById("trongtruong");
+        var temp2 = document.getElementById("ngoaitruong");
+        if (luachon == "trongtruong") {
+            temp.style.display = "block";
+            temp2.style.display = "none";
+        }
+        else {
+            temp.style.display = "none";
+            temp2.style.display = "block";
+        }
+    }
+</script>
+<div id="TieuDe">
+    <h1 style="text-align:center">Quản Lí Nhập Thiết Bị</h1>
+</div>
+<div id="PhieuNhap">
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+        Nhập Thiết Bị
+    </button>
+    @Html.ValidationSummary()
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Phiếu Nhập</h4>
+                </div>
+
+                <div class="modal-body">
+
+                    @using (Html.BeginForm("phieunhap", "Home", FormMethod.Post))
+                    {
+                        <div class="form-group">
+                            <label> Ngày Nhập</label>
+                            <input type="date" name="ngaynhap" class="form-control" />
+                        </div>
+                        <label>Nhà Cung Cấp</label>
+                        <div>
+                            <select id="chonnhacungcap" onchange="luachon1()" class="form-control" name="luachon">
+                                <option value="trongtruong">Đơn Vị Trong Trường</option>
+                                <option value="ngoaitruong">Đơn Vị Nhà Cung Cấp</option>
+                            </select>
+                        </div>
+                        <br />
+                        <div class="form-group" id="trongtruong">
+                            @Html.DropDownList("madonvi", null, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group" style="display:none" id="ngoaitruong">
+
+                            @Html.DropDownList("manhacungcap", null, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            <label> Thiết Bị</label>
+                            @Html.DropDownList("mathietbi", null, new { @class = "form-control" })
+                        </div>
+                        <div class="form-group">
+                            <label>Số Lượng</label>
+                            <input type="text" name="soluong" class="form-control" />
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                            <button type="submit" class="btn btn-primary">Lưu Phiếu</button>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div id="ThietBiDaNhap">
+
+    <div class="col-lg-8" style="border-right:double">
+        <h4>Lịch Sử Nhập</h4>
+        <table class="table table-responsive">
+            <tr>
+                <th> Mã Phiếu Nhập</th>
+                <th> Tên Thiết Bị</th>
+                <th>Nhà Cung Cấp</th>
+                <th>Ngày Nhập</th>
+                <th>Số Lượng</th>
+            </tr>
+            @foreach (var i in Model)
+            {
+                <tr>
+                    <td>@i.maphieunhap</td>
+                    <td>@i.THIETBI.tenthietbi</td>
+                    @if(i.NHACUNGCAP != null)
+                    {
+                        <td>@i.NHACUNGCAP.tennhacungcap</td>
+                    }
+                    else
+                    {
+                        <td>@i.DONVI.tendonvi</td>
+                    }
+                    
+                    <td>@Html.FormatValue(i.ngaynhap, "{0:dd/MM/yyyy}")</td>
+                    <td>@i.soluong</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <div class="col-lg-4">
+
+        <h4>Thiết bị hiện có</h4>
+        <table class="table table-responsive">
+            <tr>
+                <th> Mã Thiết Bị</th>
+                <th> Tên Thiết Bị</th>
+                <th>Số Lượng</th>
+            </tr>
+            @foreach (TaiSanCoDinh.Models.THIETBI i in ViewBag.ThietBi)
+            {
+                <tr>
+                    <td>@i.mathietbi</td>
+                    <td>@i.tenthietbi</td>
+                    <td>@i.soluong</td>
+                </tr>
+            }
+        </table>
+    </div>
+
+</div>
