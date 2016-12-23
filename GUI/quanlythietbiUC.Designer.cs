@@ -65,6 +65,7 @@
             this.cblocl = new System.Windows.Forms.ComboBox();
             this.cbloctt = new System.Windows.Forms.ComboBox();
             this.griddsthietbi = new System.Windows.Forms.DataGridView();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -109,8 +110,6 @@
             this.txbdongia.Name = "txbdongia";
             this.txbdongia.Size = new System.Drawing.Size(183, 22);
             this.txbdongia.TabIndex = 26;
-            this.txbdongia.MouseLeave += new System.EventHandler(this.txbdongia_MouseLeave);
-            this.txbdongia.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txbdongia_MouseMove);
             // 
             // txbngaycapnhat
             // 
@@ -298,6 +297,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.simpleButton1);
             this.groupBox2.Controls.Add(this.btxoa);
             this.groupBox2.Controls.Add(this.btsua);
             this.groupBox2.Controls.Add(this.btthem);
@@ -315,9 +315,9 @@
             this.btxoa.Appearance.Options.UseFont = true;
             this.btxoa.Image = ((System.Drawing.Image)(resources.GetObject("btxoa.Image")));
             this.btxoa.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btxoa.Location = new System.Drawing.Point(118, 131);
+            this.btxoa.Location = new System.Drawing.Point(118, 146);
             this.btxoa.Name = "btxoa";
-            this.btxoa.Size = new System.Drawing.Size(70, 103);
+            this.btxoa.Size = new System.Drawing.Size(70, 88);
             this.btxoa.TabIndex = 2;
             this.btxoa.Text = "Xóa";
             this.btxoa.ToolTip = "XÓA";
@@ -329,9 +329,9 @@
             this.btsua.Appearance.Options.UseFont = true;
             this.btsua.Image = ((System.Drawing.Image)(resources.GetObject("btsua.Image")));
             this.btsua.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btsua.Location = new System.Drawing.Point(37, 131);
+            this.btsua.Location = new System.Drawing.Point(37, 147);
             this.btsua.Name = "btsua";
-            this.btsua.Size = new System.Drawing.Size(75, 103);
+            this.btsua.Size = new System.Drawing.Size(75, 88);
             this.btsua.TabIndex = 1;
             this.btsua.Text = "Sửa";
             this.btsua.ToolTip = "SỬA";
@@ -343,9 +343,9 @@
             this.btthem.Appearance.Options.UseFont = true;
             this.btthem.Image = ((System.Drawing.Image)(resources.GetObject("btthem.Image")));
             this.btthem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btthem.Location = new System.Drawing.Point(37, 44);
+            this.btthem.Location = new System.Drawing.Point(37, 47);
             this.btthem.Name = "btthem";
-            this.btthem.Size = new System.Drawing.Size(149, 69);
+            this.btthem.Size = new System.Drawing.Size(75, 79);
             this.btthem.TabIndex = 0;
             this.btthem.Text = "Thêm";
             this.btthem.ToolTip = "THÊM";
@@ -435,6 +435,20 @@
             this.griddsthietbi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griddsthietbi_CellClick);
             this.griddsthietbi.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.griddsthietbi_ColumnHeaderMouseClick);
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
+            this.simpleButton1.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(118, 47);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 79);
+            this.simpleButton1.TabIndex = 3;
+            this.simpleButton1.Text = "Refresh";
+            this.simpleButton1.ToolTip = "THÊM";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // quanlythietbiUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -493,5 +507,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView griddsthietbi;
         private System.Windows.Forms.TextBox txbdongia;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

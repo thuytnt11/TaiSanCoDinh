@@ -55,9 +55,8 @@ namespace GUI
         {
             try
             {
-                
                 txbtenthietbi.Text = griddsthietbi.CurrentRow.Cells[1].Value.ToString();
-                txbdongia.Text = txbdongia.Text = string.Format("{0:#,0.#} VND", griddsthietbi.CurrentRow.Cells[2].Value.ToString());
+                txbdongia.Text = griddsthietbi.CurrentRow.Cells[2].Value.ToString();
                 rtxbthongso.Text = griddsthietbi.CurrentRow.Cells[3].Value.ToString();
                 txbngaysanxuat.Text = griddsthietbi.CurrentRow.Cells[4].Value.ToString();
                 txbngaysudung.Text = griddsthietbi.CurrentRow.Cells[5].Value.ToString();
@@ -76,7 +75,7 @@ namespace GUI
             try
             {
                 txbtenthietbi.Text = griddsthietbi.CurrentRow.Cells[1].Value.ToString();
-                txbdongia.Text = string.Format("{0:#,0.#} VND", griddsthietbi.CurrentRow.Cells[2].Value.ToString());
+                txbdongia.Text = griddsthietbi.CurrentRow.Cells[2].Value.ToString();
                 rtxbthongso.Text = griddsthietbi.CurrentRow.Cells[3].Value.ToString();
                 txbngaysanxuat.Text = griddsthietbi.CurrentRow.Cells[4].Value.ToString();
                 txbngaysudung.Text = griddsthietbi.CurrentRow.Cells[5].Value.ToString();
@@ -398,14 +397,10 @@ namespace GUI
             griddsthietbi.Sort(griddsthietbi.Columns[griddsthietbi.Columns[e.ColumnIndex].Name], ListSortDirection.Ascending);
         }
 
-        private void txbdongia_MouseLeave(object sender, EventArgs e)
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
-            txbdongia.Text = string.Format("{0:#,0.#} VND", griddsthietbi.CurrentRow.Cells[2].Value.ToString());
-        }
-
-        private void txbdongia_MouseMove(object sender, MouseEventArgs e)
-        {
-             txbdongia.Text = griddsthietbi.CurrentRow.Cells[2].Value.ToString();
+            loadds();
+            loadtt();
         }
     }
 }

@@ -143,6 +143,7 @@ namespace DAL
                 THIETBI tbb = ts.THIETBIs.Find(tb.mathietbi);
                 tbb.tenthietbi = tb.tenthietbi;
                 tbb.dongia = tb.dongia;
+                tbb.thongsokythuat = tb.thongsokythuat;
                 tbb.ngaysanxuat = tb.ngaysanxuat;
                 tbb.ngayduavaosudung = tb.ngayduavaosudung;
                 tbb.ngaycapnhat = tb.ngaycapnhat;
