@@ -1,0 +1,125 @@
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.dll.config
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.pdb
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Antlr3.Runtime.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.SqlServer.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Google.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Web.Infrastructure.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Newtonsoft.Json.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Owin.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Helpers.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Mvc.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Optimization.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Razor.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Deployment.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Razor.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\WebGrease.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Helpers.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Mvc.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Optimization.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Razor.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Deployment.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Razor.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Newtonsoft.Json.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Antlr3.Runtime.pdb
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.SqlServer.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Google.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\obj\Debug\TaiSanCoDinh.csprojResolveAssemblyReference.cache
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\obj\Debug\TaiSanCoDinh.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\obj\Debug\TaiSanCoDinh.pdb
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Mvc.dll
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.xml
+c:\users\danhi\onedrive\tài liệu\visual studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Mvc.xml
+C:\Users\danhi\OneDrive\Tài liệu\Visual Studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.dll
+C:\Users\danhi\OneDrive\Tài liệu\Visual Studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Net.dll
+C:\Users\danhi\OneDrive\Tài liệu\Visual Studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.pdb
+C:\Users\danhi\OneDrive\Tài liệu\Visual Studio 2013\Projects\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\obj\Debug\TaiSanCoDinh.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\obj\Debug\TaiSanCoDinh.pdb
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.dll.config
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\TaiSanCoDinh.pdb
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Antlr3.Runtime.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.SqlServer.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Newtonsoft.Json.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Owin.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Mvc.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Net.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Helpers.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Mvc.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Optimization.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Razor.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Razor.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\WebGrease.dll
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\EntityFramework.SqlServer.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.pdb
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\PagedList.Mvc.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Helpers.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Mvc.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Optimization.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.Razor.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\System.Web.WebPages.Razor.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Newtonsoft.Json.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Antlr3.Runtime.pdb
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\hongtieunhu\Desktop\New folder\TaiSanCoDinh\TaiSanCoDinh\bin\Microsoft.Owin.Security.MicrosoftAccount.xml

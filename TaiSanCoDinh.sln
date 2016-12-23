@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{628DFB23-E753-4229-A01E-4ABCBA6CCABB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaiSanCoDinh", "..\New folder\TaiSanCoDinh\TaiSanCoDinh\TaiSanCoDinh.csproj", "{3049228A-8CDF-4FD1-A36F-F19997059DD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaiSanCoDinh", "TaiSanCoDinh\TaiSanCoDinh\TaiSanCoDinh.csproj", "{3049228A-8CDF-4FD1-A36F-F19997059DD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

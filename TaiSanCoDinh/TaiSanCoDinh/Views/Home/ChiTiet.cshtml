@@ -1,0 +1,38 @@
+﻿@model IEnumerable<TaiSanCoDinh.Models.CHITIETPHIEUGIAO>
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Chi Tiết Hóa Đơn</h2>
+<div>
+
+
+    <div id="ChiTiet">
+        <div>
+            <table class="table table-responsive">
+                <tr>
+                    <th> Mã Phiếu Giao</th>
+                    <th> Mã Thiết Bị</th>
+                    <th> Tên Thiết Bị</th>
+                    <th> Số Lượng</th>
+                    
+                </tr>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@i.maphieugiao</td>
+                        <td>@i.mathietbi</td>
+                        <td>@i.THIETBI.tenthietbi</td>
+                        <td>@i.soluong</td>
+                        
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
