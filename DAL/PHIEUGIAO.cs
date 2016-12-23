@@ -18,7 +18,6 @@ namespace DAL
         public PHIEUGIAO()
         {
             this.CHITIETPHIEUGIAOs = new HashSet<CHITIETPHIEUGIAO>();
-            this.DONVIs = new HashSet<DONVI>();
         }
     
         public int maphieugiao { get; set; }
@@ -26,11 +25,11 @@ namespace DAL
         public Nullable<int> daky { get; set; }
         public string tinhtrang { get; set; }
         public Nullable<int> maphongquantri { get; set; }
+        public Nullable<int> madonvi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETPHIEUGIAO> CHITIETPHIEUGIAOs { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DONVI> DONVIs { get; set; }
+        public virtual DONVI DONVI { get; set; }
         public virtual PHONGQUANTRI PHONGQUANTRI { get; set; }
     }
 }

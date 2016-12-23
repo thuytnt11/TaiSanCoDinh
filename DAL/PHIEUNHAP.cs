@@ -17,9 +17,11 @@ namespace DAL
         public int maphieunhap { get; set; }
         public Nullable<System.DateTime> ngaynhap { get; set; }
         public Nullable<int> manhacungcap { get; set; }
-        public Nullable<int> mathietbi { get; set; }
+        public int mathietbi { get; set; }
         public Nullable<int> soluong { get; set; }
+        public Nullable<int> madonvi { get; set; }
     
+        public virtual DONVI DONVI { get; set; }
         public virtual NHACUNGCAP NHACUNGCAP { get; set; }
         public virtual THIETBI THIETBI { get; set; }
     }

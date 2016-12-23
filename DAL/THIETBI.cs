@@ -27,12 +27,12 @@ namespace DAL
         public string thongsokythuat { get; set; }
         public Nullable<System.DateTime> ngaysanxuat { get; set; }
         public Nullable<System.DateTime> ngayduavaosudung { get; set; }
+        public Nullable<System.DateTime> ngaycapnhat { get; set; }
         public Nullable<int> soluong { get; set; }
         public Nullable<int> madonvitinh { get; set; }
         public Nullable<int> maloai { get; set; }
         public Nullable<int> maphongquantri { get; set; }
         public Nullable<int> matinhtrang { get; set; }
-        public Nullable<System.DateTime> ngaycapnhat { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIETPHIEUGIAO> CHITIETPHIEUGIAOs { get; set; }

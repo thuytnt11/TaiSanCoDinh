@@ -33,7 +33,6 @@ namespace DAL
         public virtual DbSet<PHIEUGIAO> PHIEUGIAOs { get; set; }
         public virtual DbSet<PHIEUNHAP> PHIEUNHAPs { get; set; }
         public virtual DbSet<PHONGQUANTRI> PHONGQUANTRIs { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<THIETBI> THIETBIs { get; set; }
         public virtual DbSet<TINHTRANG> TINHTRANGs { get; set; }
     }

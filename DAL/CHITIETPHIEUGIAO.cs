@@ -17,6 +17,7 @@ namespace DAL
         public int mathietbi { get; set; }
         public int maphieugiao { get; set; }
         public Nullable<int> soluong { get; set; }
+        public int ID { get; set; }
     
         public virtual PHIEUGIAO PHIEUGIAO { get; set; }
         public virtual THIETBI THIETBI { get; set; }

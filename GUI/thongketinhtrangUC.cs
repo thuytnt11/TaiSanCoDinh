@@ -40,7 +40,7 @@ namespace GUI
             List<thietbiPUB> dsthietbi1 = thietbiBUS.dsthietbitt(tinhtrang, thoidiem);
             var dsthietbi = new ObservableCollection<thietbiPUB>(dsthietbi1).ToBindingList();
             griddsthietbi.DataSource = dsthietbi;
-            lbtong.Text = "Tổng thiết vị : " + griddsthietbi.Rows.Count;
+            lbtong.Text = "Tổng thiết bị : " + griddsthietbi.Rows.Count;
             griddsthietbi.RowHeadersVisible = false;
             griddsthietbi.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             griddsthietbi.Columns[0].HeaderText = "Mã thiết bị";
