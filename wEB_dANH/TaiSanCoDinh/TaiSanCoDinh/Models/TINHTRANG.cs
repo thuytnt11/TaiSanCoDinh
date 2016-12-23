@@ -14,14 +14,16 @@ namespace TaiSanCoDinh.Models
     
     public partial class TINHTRANG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TINHTRANG()
         {
-            this.THIETBI = new HashSet<THIETBI>();
+            this.THIETBIs = new HashSet<THIETBI>();
         }
     
         public int matinhtrang { get; set; }
         public string tentinhtrang { get; set; }
     
-        public virtual ICollection<THIETBI> THIETBI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THIETBI> THIETBIs { get; set; }
     }
 }

@@ -26,7 +26,6 @@ namespace GUI
         {
             txbtenthietbi.Text = "";
             txbdongia.Text = "";
-            txbsoluong.Text = "";
             rtxbthongso.Text = "";
             cbdonvitinh.Text = "";
             txbngaysanxuat.Text = "";
@@ -71,28 +70,62 @@ namespace GUI
 
         private void btthem_Click(object sender, EventArgs e)
         {
-            try
+            if (txbtenthietbi.Text == "" || txbdongia.Text == "" || rtxbthongso.Text == "" || cbtinhtrang.Text == "" || cbdonvitinh.Text == "" || txbngaysanxuat.Text == "" || txbngaysudung.Text == "" || cbloaithietbi.Text == "" || cbphongquantri.Text == "")
             {
-                string tenthietbi = txbtenthietbi.Text;
-                int dongia = int.Parse(txbdongia.Text);
-                string thongsokythuat = rtxbthongso.Text;
-                DateTime ngaysanxuat = DateTime.Parse(txbngaysanxuat.Text);
-                DateTime ngayduavaosudung = DateTime.Parse(txbngaysudung.Text);
-                int soluong = int.Parse(txbsoluong.Text);
-                int madonvitinh = int.Parse(cbdonvitinh.SelectedValue.ToString());
-                int maloai = int.Parse(cbloaithietbi.SelectedValue.ToString());
-                int maphongquantri = int.Parse(cbphongquantri.SelectedValue.ToString());
-                int matinhtrang = int.Parse(cbtinhtrang.SelectedValue.ToString());
-                DateTime ngaycapnhat = DateTime.Now;
-                thietbiBUS.themthietbi(tenthietbi, dongia, thongsokythuat, ngaysanxuat, ngayduavaosudung,ngaycapnhat, soluong, madonvitinh, maloai, maphongquantri, matinhtrang);
-                AutoClosingMessageBox.Show("Thêm thành công  !","THÊM",1000);
-               
+                if (txbtenthietbi.Text == "")
+                {
+                    MessageBox.Show("Tên thiết bị không được để trống");
+                }
+                if (txbdongia.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập giá thiết bị");
+                }
+                if (rtxbthongso.Text == "")
+                {
+                    MessageBox.Show("Vui lòng nhập thông số thiết bị");
+                }
+                if (cbtinhtrang.Text == "")
+                {
+                    MessageBox.Show("Chọn tình trạng của thiết bị");
+                }
+                if (cbdonvitinh.Text == "")
+                {
+                    MessageBox.Show("Chọn đơn vị tính của thiết bị");
+                }
+                if (cbloaithietbi.Text == "")
+                {
+                    MessageBox.Show("Chọn loại thiết bị");
+                }
+                if (cbphongquantri.Text == "")
+                {
+                    MessageBox.Show("Chọn phòng quản trị");
+                }
             }
-            catch
+            else
             {
-                AutoClosingMessageBox.Show("Không thành công !","THÊM",1000);
+                try
+                {
+                    string tenthietbi = txbtenthietbi.Text;
+                    int dongia = int.Parse(txbdongia.Text);
+                    string thongsokythuat = rtxbthongso.Text;
+                    DateTime ngaysanxuat = DateTime.Parse(txbngaysanxuat.Text);
+                    DateTime ngayduavaosudung = DateTime.Parse(txbngaysudung.Text);
+                    int soluong = 0;
+                    int madonvitinh = int.Parse(cbdonvitinh.SelectedValue.ToString());
+                    int maloai = int.Parse(cbloaithietbi.SelectedValue.ToString());
+                    int maphongquantri = int.Parse(cbphongquantri.SelectedValue.ToString());
+                    int matinhtrang = int.Parse(cbtinhtrang.SelectedValue.ToString());
+                    DateTime ngaycapnhat = DateTime.Now;
+                    thietbiBUS.themthietbi(tenthietbi, dongia, thongsokythuat, ngaysanxuat, ngayduavaosudung, ngaycapnhat, soluong, madonvitinh, maloai, maphongquantri, matinhtrang);
+                    AutoClosingMessageBox.Show("Thêm thành công  !", "THÊM", 1000);
+
+                }
+                catch
+                {
+                    AutoClosingMessageBox.Show("Không thành công !", "THÊM", 1000);
+                }
             }
-        }
+            }
 
         private void txbtenthietbi_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -106,15 +139,6 @@ namespace GUI
         private void txbdongia_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)8))
-            {
-                e.Handled = true;
-                AutoClosingMessageBox.Show("Vui lòng chỉ nhập số", "TRỢ GIÚP",1000);
-            }
-        }
-
-        private void txbsoluong_KeyPress(object sender, KeyPressEventArgs e)
-        {
             if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)8))
             {
                 e.Handled = true;
@@ -178,6 +202,5 @@ namespace GUI
             [System.Runtime.InteropServices.DllImport("user32.dll", CharSet = System.Runtime.InteropServices.CharSet.Auto)]
             static extern IntPtr SendMessage(IntPtr hWnd, UInt32 Msg, IntPtr wParam, IntPtr lParam);
         }
-
     }
 }

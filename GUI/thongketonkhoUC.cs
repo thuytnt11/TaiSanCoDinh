@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using PUB;
 using BUS;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 
 namespace GUI
 {
@@ -33,7 +35,8 @@ namespace GUI
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             DateTime thoidiem = DateTime.Parse(dateTimePicker1.Text);
-            List<dskho> dsthietbitk = BUS.thietbiBUS.dsthietbikho(thoidiem);
+            List<dskho> dsthietbitk1 = BUS.thietbiBUS.dsthietbikho(thoidiem);
+            var dsthietbitk = new ObservableCollection<dskho>(dsthietbitk1).ToBindingList();
             griddsthietbi.DataSource = dsthietbitk;
             griddsthietbi.RowHeadersVisible = false;
             griddsthietbi.Columns[0].Width = 350;

@@ -95,6 +95,7 @@
             this.griddsthietbi.Name = "griddsthietbi";
             this.griddsthietbi.Size = new System.Drawing.Size(995, 317);
             this.griddsthietbi.TabIndex = 6;
+            this.griddsthietbi.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.griddsthietbi_ColumnHeaderMouseClick);
             // 
             // dtthoidiem
             // 

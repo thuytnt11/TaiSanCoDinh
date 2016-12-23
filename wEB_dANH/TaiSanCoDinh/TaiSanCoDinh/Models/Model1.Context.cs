@@ -13,10 +13,10 @@ namespace TaiSanCoDinh.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TSCDEntities3 : DbContext
+    public partial class TSCDEntities4 : DbContext
     {
-        public TSCDEntities3()
-            : base("name=TSCDEntities3")
+        public TSCDEntities4()
+            : base("name=TSCDEntities4")
         {
         }
     
@@ -25,16 +25,16 @@ namespace TaiSanCoDinh.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<CHITIETPHIEUGIAO> CHITIETPHIEUGIAO { get; set; }
-        public virtual DbSet<DONVI> DONVI { get; set; }
-        public virtual DbSet<DONVITINH> DONVITINH { get; set; }
-        public virtual DbSet<LOAITHIETBI> LOAITHIETBI { get; set; }
-        public virtual DbSet<NHACUNGCAP> NHACUNGCAP { get; set; }
-        public virtual DbSet<PHIEUGIAO> PHIEUGIAO { get; set; }
-        public virtual DbSet<PHIEUNHAP> PHIEUNHAP { get; set; }
-        public virtual DbSet<PHONGQUANTRI> PHONGQUANTRI { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
-        public virtual DbSet<TINHTRANG> TINHTRANG { get; set; }
-        public virtual DbSet<THIETBI> THIETBI { get; set; }
+        public virtual DbSet<CHITIETPHIEUGIAO> CHITIETPHIEUGIAOs { get; set; }
+        public virtual DbSet<DONVI> DONVIs { get; set; }
+        public virtual DbSet<DONVITINH> DONVITINHs { get; set; }
+        public virtual DbSet<LOAITHIETBI> LOAITHIETBIs { get; set; }
+        public virtual DbSet<NHACUNGCAP> NHACUNGCAPs { get; set; }
+        public virtual DbSet<PHIEUGIAO> PHIEUGIAOs { get; set; }
+        public virtual DbSet<PHIEUNHAP> PHIEUNHAPs { get; set; }
+        public virtual DbSet<PHONGQUANTRI> PHONGQUANTRIs { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<THIETBI> THIETBIs { get; set; }
+        public virtual DbSet<TINHTRANG> TINHTRANGs { get; set; }
     }
 }

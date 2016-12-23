@@ -14,17 +14,20 @@ namespace TaiSanCoDinh.Models
     
     public partial class DONVI
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public DONVI()
         {
-            this.PHIEUGIAO = new HashSet<PHIEUGIAO>();
-            this.PHIEUNHAP = new HashSet<PHIEUNHAP>();
+            this.PHIEUGIAOs = new HashSet<PHIEUGIAO>();
+            this.PHIEUNHAPs = new HashSet<PHIEUNHAP>();
         }
     
         public int madonvi { get; set; }
         public string tendonvi { get; set; }
         public string ghichu { get; set; }
     
-        public virtual ICollection<PHIEUGIAO> PHIEUGIAO { get; set; }
-        public virtual ICollection<PHIEUNHAP> PHIEUNHAP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUGIAO> PHIEUGIAOs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUNHAP> PHIEUNHAPs { get; set; }
     }
 }

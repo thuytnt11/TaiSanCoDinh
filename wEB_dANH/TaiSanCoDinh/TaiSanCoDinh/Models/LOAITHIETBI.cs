@@ -14,14 +14,16 @@ namespace TaiSanCoDinh.Models
     
     public partial class LOAITHIETBI
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAITHIETBI()
         {
-            this.THIETBI = new HashSet<THIETBI>();
+            this.THIETBIs = new HashSet<THIETBI>();
         }
     
         public int maloai { get; set; }
         public string tenloai { get; set; }
     
-        public virtual ICollection<THIETBI> THIETBI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THIETBI> THIETBIs { get; set; }
     }
 }

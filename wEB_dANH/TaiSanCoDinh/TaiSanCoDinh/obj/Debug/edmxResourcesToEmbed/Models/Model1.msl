@@ -1,17 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="TSCDModelStoreContainer" CdmEntityContainer="TSCDEntities3">
-    <EntitySetMapping Name="CHITIETPHIEUGIAO">
+  <EntityContainerMapping StorageEntityContainer="TSCDModelStoreContainer" CdmEntityContainer="TSCDEntities4">
+    <EntitySetMapping Name="CHITIETPHIEUGIAOs">
       <EntityTypeMapping TypeName="TSCDModel.CHITIETPHIEUGIAO">
         <MappingFragment StoreEntitySet="CHITIETPHIEUGIAO">
           <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
           <ScalarProperty Name="maphieugiao" ColumnName="maphieugiao" />
           <ScalarProperty Name="soluong" ColumnName="soluong" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DONVI">
+    <EntitySetMapping Name="DONVIs">
       <EntityTypeMapping TypeName="TSCDModel.DONVI">
         <MappingFragment StoreEntitySet="DONVI">
           <ScalarProperty Name="madonvi" ColumnName="madonvi" />
@@ -20,7 +19,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="DONVITINH">
+    <EntitySetMapping Name="DONVITINHs">
       <EntityTypeMapping TypeName="TSCDModel.DONVITINH">
         <MappingFragment StoreEntitySet="DONVITINH">
           <ScalarProperty Name="madonvitinh" ColumnName="madonvitinh" />
@@ -28,7 +27,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LOAITHIETBI">
+    <EntitySetMapping Name="LOAITHIETBIs">
       <EntityTypeMapping TypeName="TSCDModel.LOAITHIETBI">
         <MappingFragment StoreEntitySet="LOAITHIETBI">
           <ScalarProperty Name="maloai" ColumnName="maloai" />
@@ -36,7 +35,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="NHACUNGCAP">
+    <EntitySetMapping Name="NHACUNGCAPs">
       <EntityTypeMapping TypeName="TSCDModel.NHACUNGCAP">
         <MappingFragment StoreEntitySet="NHACUNGCAP">
           <ScalarProperty Name="manhacungcap" ColumnName="manhacungcap" />
@@ -46,7 +45,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHIEUGIAO">
+    <EntitySetMapping Name="PHIEUGIAOs">
       <EntityTypeMapping TypeName="TSCDModel.PHIEUGIAO">
         <MappingFragment StoreEntitySet="PHIEUGIAO">
           <ScalarProperty Name="maphieugiao" ColumnName="maphieugiao" />
@@ -58,7 +57,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHIEUNHAP">
+    <EntitySetMapping Name="PHIEUNHAPs">
       <EntityTypeMapping TypeName="TSCDModel.PHIEUNHAP">
         <MappingFragment StoreEntitySet="PHIEUNHAP">
           <ScalarProperty Name="maphieunhap" ColumnName="maphieunhap" />
@@ -70,7 +69,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="PHONGQUANTRI">
+    <EntitySetMapping Name="PHONGQUANTRIs">
       <EntityTypeMapping TypeName="TSCDModel.PHONGQUANTRI">
         <MappingFragment StoreEntitySet="PHONGQUANTRI">
           <ScalarProperty Name="maphongquantri" ColumnName="maphongquantri" />
@@ -79,7 +78,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="TSCDModel.sysdiagrams">
+      <EntityTypeMapping TypeName="TSCDModel.sysdiagram">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -89,15 +88,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TINHTRANG">
-      <EntityTypeMapping TypeName="TSCDModel.TINHTRANG">
-        <MappingFragment StoreEntitySet="TINHTRANG">
-          <ScalarProperty Name="matinhtrang" ColumnName="matinhtrang" />
-          <ScalarProperty Name="tentinhtrang" ColumnName="tentinhtrang" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="THIETBI">
+    <EntitySetMapping Name="THIETBIs">
       <EntityTypeMapping TypeName="TSCDModel.THIETBI">
         <MappingFragment StoreEntitySet="THIETBI">
           <ScalarProperty Name="mathietbi" ColumnName="mathietbi" />
@@ -112,6 +103,14 @@
           <ScalarProperty Name="maloai" ColumnName="maloai" />
           <ScalarProperty Name="maphongquantri" ColumnName="maphongquantri" />
           <ScalarProperty Name="matinhtrang" ColumnName="matinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TINHTRANGs">
+      <EntityTypeMapping TypeName="TSCDModel.TINHTRANG">
+        <MappingFragment StoreEntitySet="TINHTRANG">
+          <ScalarProperty Name="matinhtrang" ColumnName="matinhtrang" />
+          <ScalarProperty Name="tentinhtrang" ColumnName="tentinhtrang" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

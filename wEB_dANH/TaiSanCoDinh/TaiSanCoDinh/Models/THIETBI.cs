@@ -14,10 +14,11 @@ namespace TaiSanCoDinh.Models
     
     public partial class THIETBI
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public THIETBI()
         {
-            this.CHITIETPHIEUGIAO = new HashSet<CHITIETPHIEUGIAO>();
-            this.PHIEUNHAP = new HashSet<PHIEUNHAP>();
+            this.CHITIETPHIEUGIAOs = new HashSet<CHITIETPHIEUGIAO>();
+            this.PHIEUNHAPs = new HashSet<PHIEUNHAP>();
         }
     
         public int mathietbi { get; set; }
@@ -33,10 +34,12 @@ namespace TaiSanCoDinh.Models
         public Nullable<int> maphongquantri { get; set; }
         public Nullable<int> matinhtrang { get; set; }
     
-        public virtual ICollection<CHITIETPHIEUGIAO> CHITIETPHIEUGIAO { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETPHIEUGIAO> CHITIETPHIEUGIAOs { get; set; }
         public virtual DONVITINH DONVITINH { get; set; }
         public virtual LOAITHIETBI LOAITHIETBI { get; set; }
-        public virtual ICollection<PHIEUNHAP> PHIEUNHAP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUNHAP> PHIEUNHAPs { get; set; }
         public virtual PHONGQUANTRI PHONGQUANTRI { get; set; }
         public virtual TINHTRANG TINHTRANG { get; set; }
     }

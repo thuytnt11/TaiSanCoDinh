@@ -57,19 +57,18 @@
             this.btsua = new DevExpress.XtraEditors.SimpleButton();
             this.btthem = new DevExpress.XtraEditors.SimpleButton();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.griddsthietbi = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.bttim = new DevExpress.XtraEditors.SimpleButton();
             this.txbtim = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cblocl = new System.Windows.Forms.ComboBox();
             this.cbloctt = new System.Windows.Forms.ComboBox();
+            this.griddsthietbi = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.griddsthietbi)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.griddsthietbi)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -189,8 +188,10 @@
             // 
             // txbsoluong
             // 
+            this.txbsoluong.Enabled = false;
             this.txbsoluong.Location = new System.Drawing.Point(127, 104);
             this.txbsoluong.Name = "txbsoluong";
+            this.txbsoluong.ReadOnly = true;
             this.txbsoluong.Size = new System.Drawing.Size(183, 22);
             this.txbsoluong.TabIndex = 11;
             this.txbsoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbsoluong_KeyPress);
@@ -309,8 +310,10 @@
             // 
             // btxoa
             // 
+            this.btxoa.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btxoa.Appearance.Options.UseFont = true;
             this.btxoa.Image = ((System.Drawing.Image)(resources.GetObject("btxoa.Image")));
-            this.btxoa.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btxoa.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btxoa.Location = new System.Drawing.Point(118, 131);
             this.btxoa.Name = "btxoa";
             this.btxoa.Size = new System.Drawing.Size(70, 103);
@@ -321,8 +324,10 @@
             // 
             // btsua
             // 
+            this.btsua.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btsua.Appearance.Options.UseFont = true;
             this.btsua.Image = ((System.Drawing.Image)(resources.GetObject("btsua.Image")));
-            this.btsua.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btsua.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btsua.Location = new System.Drawing.Point(37, 131);
             this.btsua.Name = "btsua";
             this.btsua.Size = new System.Drawing.Size(75, 103);
@@ -333,8 +338,10 @@
             // 
             // btthem
             // 
+            this.btthem.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthem.Appearance.Options.UseFont = true;
             this.btthem.Image = ((System.Drawing.Image)(resources.GetObject("btthem.Image")));
-            this.btthem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btthem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btthem.Location = new System.Drawing.Point(37, 44);
             this.btthem.Name = "btthem";
             this.btthem.Size = new System.Drawing.Size(149, 69);
@@ -343,22 +350,9 @@
             this.btthem.ToolTip = "THÊM";
             this.btthem.Click += new System.EventHandler(this.btthem_Click);
             // 
-            // griddsthietbi
-            // 
-            this.griddsthietbi.AllowUserToDeleteRows = false;
-            this.griddsthietbi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.griddsthietbi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.griddsthietbi.Location = new System.Drawing.Point(4, 318);
-            this.griddsthietbi.Name = "griddsthietbi";
-            this.griddsthietbi.ReadOnly = true;
-            this.griddsthietbi.Size = new System.Drawing.Size(980, 242);
-            this.griddsthietbi.TabIndex = 3;
-            this.griddsthietbi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griddsthietbi_CellClick);
-            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.LightGreen;
-            this.groupBox3.Controls.Add(this.bttim);
             this.groupBox3.Controls.Add(this.txbtim);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label12);
@@ -373,23 +367,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Bộ lọc";
             // 
-            // bttim
-            // 
-            this.bttim.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.bttim.Image = ((System.Drawing.Image)(resources.GetObject("bttim.Image")));
-            this.bttim.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.bttim.Location = new System.Drawing.Point(295, 15);
-            this.bttim.Name = "bttim";
-            this.bttim.Size = new System.Drawing.Size(41, 24);
-            this.bttim.TabIndex = 12;
-            this.bttim.Click += new System.EventHandler(this.bttim_Click);
-            // 
             // txbtim
             // 
             this.txbtim.Location = new System.Drawing.Point(131, 15);
             this.txbtim.Name = "txbtim";
-            this.txbtim.Size = new System.Drawing.Size(158, 22);
+            this.txbtim.Size = new System.Drawing.Size(179, 22);
             this.txbtim.TabIndex = 11;
+            this.txbtim.TextChanged += new System.EventHandler(this.txbtim_TextChanged);
             this.txbtim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbtim_KeyPress);
             // 
             // label14
@@ -437,6 +421,19 @@
             this.cbloctt.TabIndex = 0;
             this.cbloctt.SelectedIndexChanged += new System.EventHandler(this.cbloctt_SelectedIndexChanged);
             // 
+            // griddsthietbi
+            // 
+            this.griddsthietbi.AllowUserToDeleteRows = false;
+            this.griddsthietbi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.griddsthietbi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.griddsthietbi.Location = new System.Drawing.Point(4, 318);
+            this.griddsthietbi.Name = "griddsthietbi";
+            this.griddsthietbi.ReadOnly = true;
+            this.griddsthietbi.Size = new System.Drawing.Size(980, 242);
+            this.griddsthietbi.TabIndex = 3;
+            this.griddsthietbi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.griddsthietbi_CellClick);
+            this.griddsthietbi.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.griddsthietbi_ColumnHeaderMouseClick);
+            // 
             // quanlythietbiUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -451,9 +448,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.griddsthietbi)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.griddsthietbi)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -480,7 +477,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView griddsthietbi;
         private System.Windows.Forms.ComboBox cbdonvitinh;
         private System.Windows.Forms.ComboBox cbtinhtrang;
         private System.Windows.Forms.Label label10;
@@ -493,8 +489,8 @@
         private System.Windows.Forms.DateTimePicker txbngaycapnhat;
         private System.Windows.Forms.DateTimePicker txbngaysudung;
         private System.Windows.Forms.DateTimePicker txbngaysanxuat;
-        private DevExpress.XtraEditors.SimpleButton bttim;
         private System.Windows.Forms.TextBox txbtim;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DataGridView griddsthietbi;
     }
 }

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TSCDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="TSCDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="CHITIETPHIEUGIAO">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="mathietbi" />
+      <PropertyRef Name="maphieugiao" />
     </Key>
     <Property Name="mathietbi" Type="Int32" Nullable="false" />
     <Property Name="maphieugiao" Type="Int32" Nullable="false" />
     <Property Name="soluong" Type="Int32" />
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <NavigationProperty Name="PHIEUGIAO" Relationship="Self.FK_CHITIETPHIEUGIAO_PHIEUGIAO" FromRole="CHITIETPHIEUGIAO" ToRole="PHIEUGIAO" />
     <NavigationProperty Name="THIETBI" Relationship="Self.FK_CHITIETPHIEUGIAO_THIETBI" FromRole="CHITIETPHIEUGIAO" ToRole="THIETBI" />
   </EntityType>
@@ -18,8 +18,8 @@
     <Property Name="madonvi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tendonvi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="ghichu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PHIEUGIAO" Relationship="Self.FK_PHIEUGIAO_DONVI" FromRole="DONVI" ToRole="PHIEUGIAO" />
-    <NavigationProperty Name="PHIEUNHAP" Relationship="Self.FK_PHIEUNHAP_DONVI" FromRole="DONVI" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="PHIEUGIAOs" Relationship="Self.FK_PHIEUGIAO_DONVI" FromRole="DONVI" ToRole="PHIEUGIAO" />
+    <NavigationProperty Name="PHIEUNHAPs" Relationship="Self.FK_PHIEUNHAP_DONVI" FromRole="DONVI" ToRole="PHIEUNHAP" />
   </EntityType>
   <EntityType Name="DONVITINH">
     <Key>
@@ -27,7 +27,7 @@
     </Key>
     <Property Name="madonvitinh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tendonvitinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="THIETBI" Relationship="Self.FK_THIETBI_DONVITINH" FromRole="DONVITINH" ToRole="THIETBI" />
+    <NavigationProperty Name="THIETBIs" Relationship="Self.FK_THIETBI_DONVITINH" FromRole="DONVITINH" ToRole="THIETBI" />
   </EntityType>
   <EntityType Name="LOAITHIETBI">
     <Key>
@@ -35,7 +35,7 @@
     </Key>
     <Property Name="maloai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tenloai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="THIETBI" Relationship="Self.FK_THIETBI_LOAITHIETBI" FromRole="LOAITHIETBI" ToRole="THIETBI" />
+    <NavigationProperty Name="THIETBIs" Relationship="Self.FK_THIETBI_LOAITHIETBI" FromRole="LOAITHIETBI" ToRole="THIETBI" />
   </EntityType>
   <EntityType Name="NHACUNGCAP">
     <Key>
@@ -45,7 +45,7 @@
     <Property Name="tennhacungcap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="diachi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="sdt" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PHIEUNHAP" Relationship="Self.FK_PHIEUNHAP_NHACUNGCAP" FromRole="NHACUNGCAP" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="PHIEUNHAPs" Relationship="Self.FK_PHIEUNHAP_NHACUNGCAP" FromRole="NHACUNGCAP" ToRole="PHIEUNHAP" />
   </EntityType>
   <EntityType Name="PHIEUGIAO">
     <Key>
@@ -57,7 +57,7 @@
     <Property Name="tinhtrang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="maphongquantri" Type="Int32" />
     <Property Name="madonvi" Type="Int32" />
-    <NavigationProperty Name="CHITIETPHIEUGIAO" Relationship="Self.FK_CHITIETPHIEUGIAO_PHIEUGIAO" FromRole="PHIEUGIAO" ToRole="CHITIETPHIEUGIAO" />
+    <NavigationProperty Name="CHITIETPHIEUGIAOs" Relationship="Self.FK_CHITIETPHIEUGIAO_PHIEUGIAO" FromRole="PHIEUGIAO" ToRole="CHITIETPHIEUGIAO" />
     <NavigationProperty Name="DONVI" Relationship="Self.FK_PHIEUGIAO_DONVI" FromRole="PHIEUGIAO" ToRole="DONVI" />
     <NavigationProperty Name="PHONGQUANTRI" Relationship="Self.FK_PHIEUGIAO_PHONGQUANTRITHIETBI" FromRole="PHIEUGIAO" ToRole="PHONGQUANTRI" />
   </EntityType>
@@ -81,10 +81,10 @@
     </Key>
     <Property Name="maphongquantri" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tenphongquantri" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="PHIEUGIAO" Relationship="Self.FK_PHIEUGIAO_PHONGQUANTRITHIETBI" FromRole="PHONGQUANTRI" ToRole="PHIEUGIAO" />
-    <NavigationProperty Name="THIETBI" Relationship="Self.FK_THIETBI_PHONGQUANTRITHIETBI" FromRole="PHONGQUANTRI" ToRole="THIETBI" />
+    <NavigationProperty Name="PHIEUGIAOs" Relationship="Self.FK_PHIEUGIAO_PHONGQUANTRITHIETBI" FromRole="PHONGQUANTRI" ToRole="PHIEUGIAO" />
+    <NavigationProperty Name="THIETBIs" Relationship="Self.FK_THIETBI_PHONGQUANTRITHIETBI" FromRole="PHONGQUANTRI" ToRole="THIETBI" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
+  <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
@@ -93,14 +93,6 @@
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
-  <EntityType Name="TINHTRANG">
-    <Key>
-      <PropertyRef Name="matinhtrang" />
-    </Key>
-    <Property Name="matinhtrang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="tentinhtrang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="THIETBI" Relationship="Self.FK_THIETBI_TINHTRANG" FromRole="TINHTRANG" ToRole="THIETBI" />
   </EntityType>
   <EntityType Name="THIETBI">
     <Key>
@@ -118,12 +110,20 @@
     <Property Name="maloai" Type="Int32" />
     <Property Name="maphongquantri" Type="Int32" />
     <Property Name="matinhtrang" Type="Int32" />
-    <NavigationProperty Name="CHITIETPHIEUGIAO" Relationship="Self.FK_CHITIETPHIEUGIAO_THIETBI" FromRole="THIETBI" ToRole="CHITIETPHIEUGIAO" />
+    <NavigationProperty Name="CHITIETPHIEUGIAOs" Relationship="Self.FK_CHITIETPHIEUGIAO_THIETBI" FromRole="THIETBI" ToRole="CHITIETPHIEUGIAO" />
     <NavigationProperty Name="DONVITINH" Relationship="Self.FK_THIETBI_DONVITINH" FromRole="THIETBI" ToRole="DONVITINH" />
     <NavigationProperty Name="LOAITHIETBI" Relationship="Self.FK_THIETBI_LOAITHIETBI" FromRole="THIETBI" ToRole="LOAITHIETBI" />
-    <NavigationProperty Name="PHIEUNHAP" Relationship="Self.FK_PHIEUNHAP_THIETBI" FromRole="THIETBI" ToRole="PHIEUNHAP" />
+    <NavigationProperty Name="PHIEUNHAPs" Relationship="Self.FK_PHIEUNHAP_THIETBI" FromRole="THIETBI" ToRole="PHIEUNHAP" />
     <NavigationProperty Name="PHONGQUANTRI" Relationship="Self.FK_THIETBI_PHONGQUANTRITHIETBI" FromRole="THIETBI" ToRole="PHONGQUANTRI" />
     <NavigationProperty Name="TINHTRANG" Relationship="Self.FK_THIETBI_TINHTRANG" FromRole="THIETBI" ToRole="TINHTRANG" />
+  </EntityType>
+  <EntityType Name="TINHTRANG">
+    <Key>
+      <PropertyRef Name="matinhtrang" />
+    </Key>
+    <Property Name="matinhtrang" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tentinhtrang" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="THIETBIs" Relationship="Self.FK_THIETBI_TINHTRANG" FromRole="TINHTRANG" ToRole="THIETBI" />
   </EntityType>
   <Association Name="FK_CHITIETPHIEUGIAO_PHIEUGIAO">
     <End Role="PHIEUGIAO" Type="Self.PHIEUGIAO" Multiplicity="1" />
@@ -257,61 +257,61 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="TSCDEntities3" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="CHITIETPHIEUGIAO" EntityType="Self.CHITIETPHIEUGIAO" />
-    <EntitySet Name="DONVI" EntityType="Self.DONVI" />
-    <EntitySet Name="DONVITINH" EntityType="Self.DONVITINH" />
-    <EntitySet Name="LOAITHIETBI" EntityType="Self.LOAITHIETBI" />
-    <EntitySet Name="NHACUNGCAP" EntityType="Self.NHACUNGCAP" />
-    <EntitySet Name="PHIEUGIAO" EntityType="Self.PHIEUGIAO" />
-    <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" />
-    <EntitySet Name="PHONGQUANTRI" EntityType="Self.PHONGQUANTRI" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
-    <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" />
-    <EntitySet Name="THIETBI" EntityType="Self.THIETBI" />
+  <EntityContainer Name="TSCDEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CHITIETPHIEUGIAOs" EntityType="Self.CHITIETPHIEUGIAO" />
+    <EntitySet Name="DONVIs" EntityType="Self.DONVI" />
+    <EntitySet Name="DONVITINHs" EntityType="Self.DONVITINH" />
+    <EntitySet Name="LOAITHIETBIs" EntityType="Self.LOAITHIETBI" />
+    <EntitySet Name="NHACUNGCAPs" EntityType="Self.NHACUNGCAP" />
+    <EntitySet Name="PHIEUGIAOs" EntityType="Self.PHIEUGIAO" />
+    <EntitySet Name="PHIEUNHAPs" EntityType="Self.PHIEUNHAP" />
+    <EntitySet Name="PHONGQUANTRIs" EntityType="Self.PHONGQUANTRI" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="THIETBIs" EntityType="Self.THIETBI" />
+    <EntitySet Name="TINHTRANGs" EntityType="Self.TINHTRANG" />
     <AssociationSet Name="FK_CHITIETPHIEUGIAO_PHIEUGIAO" Association="Self.FK_CHITIETPHIEUGIAO_PHIEUGIAO">
-      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAO" />
-      <End Role="CHITIETPHIEUGIAO" EntitySet="CHITIETPHIEUGIAO" />
+      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAOs" />
+      <End Role="CHITIETPHIEUGIAO" EntitySet="CHITIETPHIEUGIAOs" />
     </AssociationSet>
     <AssociationSet Name="FK_CHITIETPHIEUGIAO_THIETBI" Association="Self.FK_CHITIETPHIEUGIAO_THIETBI">
-      <End Role="THIETBI" EntitySet="THIETBI" />
-      <End Role="CHITIETPHIEUGIAO" EntitySet="CHITIETPHIEUGIAO" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
+      <End Role="CHITIETPHIEUGIAO" EntitySet="CHITIETPHIEUGIAOs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHIEUGIAO_DONVI" Association="Self.FK_PHIEUGIAO_DONVI">
-      <End Role="DONVI" EntitySet="DONVI" />
-      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAO" />
+      <End Role="DONVI" EntitySet="DONVIs" />
+      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAOs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHIEUNHAP_DONVI" Association="Self.FK_PHIEUNHAP_DONVI">
-      <End Role="DONVI" EntitySet="DONVI" />
-      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="DONVI" EntitySet="DONVIs" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAPs" />
     </AssociationSet>
     <AssociationSet Name="FK_THIETBI_DONVITINH" Association="Self.FK_THIETBI_DONVITINH">
-      <End Role="DONVITINH" EntitySet="DONVITINH" />
-      <End Role="THIETBI" EntitySet="THIETBI" />
+      <End Role="DONVITINH" EntitySet="DONVITINHs" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
     </AssociationSet>
     <AssociationSet Name="FK_THIETBI_LOAITHIETBI" Association="Self.FK_THIETBI_LOAITHIETBI">
-      <End Role="LOAITHIETBI" EntitySet="LOAITHIETBI" />
-      <End Role="THIETBI" EntitySet="THIETBI" />
+      <End Role="LOAITHIETBI" EntitySet="LOAITHIETBIs" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHIEUNHAP_NHACUNGCAP" Association="Self.FK_PHIEUNHAP_NHACUNGCAP">
-      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAP" />
-      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="NHACUNGCAP" EntitySet="NHACUNGCAPs" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAPs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHIEUGIAO_PHONGQUANTRITHIETBI" Association="Self.FK_PHIEUGIAO_PHONGQUANTRITHIETBI">
-      <End Role="PHONGQUANTRI" EntitySet="PHONGQUANTRI" />
-      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAO" />
+      <End Role="PHONGQUANTRI" EntitySet="PHONGQUANTRIs" />
+      <End Role="PHIEUGIAO" EntitySet="PHIEUGIAOs" />
     </AssociationSet>
     <AssociationSet Name="FK_PHIEUNHAP_THIETBI" Association="Self.FK_PHIEUNHAP_THIETBI">
-      <End Role="THIETBI" EntitySet="THIETBI" />
-      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAP" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
+      <End Role="PHIEUNHAP" EntitySet="PHIEUNHAPs" />
     </AssociationSet>
     <AssociationSet Name="FK_THIETBI_PHONGQUANTRITHIETBI" Association="Self.FK_THIETBI_PHONGQUANTRITHIETBI">
-      <End Role="PHONGQUANTRI" EntitySet="PHONGQUANTRI" />
-      <End Role="THIETBI" EntitySet="THIETBI" />
+      <End Role="PHONGQUANTRI" EntitySet="PHONGQUANTRIs" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
     </AssociationSet>
     <AssociationSet Name="FK_THIETBI_TINHTRANG" Association="Self.FK_THIETBI_TINHTRANG">
-      <End Role="TINHTRANG" EntitySet="TINHTRANG" />
-      <End Role="THIETBI" EntitySet="THIETBI" />
+      <End Role="TINHTRANG" EntitySet="TINHTRANGs" />
+      <End Role="THIETBI" EntitySet="THIETBIs" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -14,9 +14,10 @@ namespace TaiSanCoDinh.Models
     
     public partial class NHACUNGCAP
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public NHACUNGCAP()
         {
-            this.PHIEUNHAP = new HashSet<PHIEUNHAP>();
+            this.PHIEUNHAPs = new HashSet<PHIEUNHAP>();
         }
     
         public int manhacungcap { get; set; }
@@ -24,6 +25,7 @@ namespace TaiSanCoDinh.Models
         public string diachi { get; set; }
         public string sdt { get; set; }
     
-        public virtual ICollection<PHIEUNHAP> PHIEUNHAP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUNHAP> PHIEUNHAPs { get; set; }
     }
 }

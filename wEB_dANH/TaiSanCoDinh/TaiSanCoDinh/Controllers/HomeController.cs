@@ -9,7 +9,7 @@ namespace TaiSanCoDinh.Controllers
 {
     public class HomeController : Controller
     {
-        TSCDEntities3 db = new TSCDEntities3();
+        TSCDEntities4 db = new TSCDEntities4();
 
         public ActionResult Index()
         {
@@ -31,12 +31,12 @@ namespace TaiSanCoDinh.Controllers
         }
         public ActionResult PhieuNhap()
         {
-            ViewData["mathietbi"] = new SelectList(db.THIETBI, "mathietbi", "tenthietbi");
-            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAP, "manhacungcap", "tennhacungcap");
-            ViewData["madonvi"] = new SelectList(db.DONVI, "madonvi", "tendonvi");
-            ViewBag.ThietBi = db.THIETBI.ToList();
+            ViewData["mathietbi"] = new SelectList(db.THIETBIs, "mathietbi", "tenthietbi");
+            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAPs, "manhacungcap", "tennhacungcap");
+            ViewData["madonvi"] = new SelectList(db.DONVIs, "madonvi", "tendonvi");
+            ViewBag.ThietBi = db.THIETBIs.ToList();
 
-            var model = db.PHIEUNHAP.ToList();
+            var model = db.PHIEUNHAPs.ToList();
             return View(model);
         }
         [HttpPost]
@@ -58,10 +58,10 @@ namespace TaiSanCoDinh.Controllers
                 {
                     phieunhap.madonvi = null;
                 }
-                db.PHIEUNHAP.Add(phieunhap);
+                db.PHIEUNHAPs.Add(phieunhap);
                 
                 
-                var model1 = db.THIETBI.Find(phieunhap.mathietbi);
+                var model1 = db.THIETBIs.Find(phieunhap.mathietbi);
                 model1.soluong += soluong;
 
 
@@ -74,12 +74,12 @@ namespace TaiSanCoDinh.Controllers
             }
 
 
-            ViewBag.ThietBi = db.THIETBI.ToList();
-            ViewData["mathietbi"] = new SelectList(db.THIETBI, "mathietbi", "tenthietbi");
-            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAP, "manhacungcap", "tennhacungcap");
-            ViewData["madonvi"] = new SelectList(db.DONVI, "madonvi", "tendonvi");
+            ViewBag.ThietBi = db.THIETBIs.ToList();
+            ViewData["mathietbi"] = new SelectList(db.THIETBIs, "mathietbi", "tenthietbi");
+            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAPs, "manhacungcap", "tennhacungcap");
+            ViewData["madonvi"] = new SelectList(db.DONVIs, "madonvi", "tendonvi");
 
-            var model = db.PHIEUNHAP.ToList();
+            var model = db.PHIEUNHAPs.ToList();
             return View("PhieuNhap", model);
 
         }
@@ -87,12 +87,12 @@ namespace TaiSanCoDinh.Controllers
         {
 
             
-            ViewData["maphongquantri"] = new SelectList(db.PHONGQUANTRI, "maphongquantri", "tenphongquantri");
-            ViewData["madonvi"] = new SelectList(db.DONVI, "madonvi", "tendonvi");
-            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAP, "manhacungcap", "tennhacungcap");
-            ViewBag.ThietBi = db.THIETBI.ToList();
+            ViewData["maphongquantri"] = new SelectList(db.PHONGQUANTRIs, "maphongquantri", "tenphongquantri");
+            ViewData["madonvi"] = new SelectList(db.DONVIs, "madonvi", "tendonvi");
+            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAPs, "manhacungcap", "tennhacungcap");
+            ViewBag.ThietBi = db.THIETBIs.ToList();
 
-            var model = db.PHIEUGIAO.ToList();
+            var model = db.PHIEUGIAOs.ToList();
             return View(model);
         }
         [HttpPost]
@@ -116,7 +116,7 @@ namespace TaiSanCoDinh.Controllers
                 pg.maphongquantri = Convert.ToInt16(form["maphongquantri"]);
                 pg.madonvi = Convert.ToInt16(form["madonvi"]);
                 
-                db.PHIEUGIAO.Add(pg);
+                db.PHIEUGIAOs.Add(pg);
                 db.SaveChanges();
 
                 for (int i = 0; i < key.Length; i++)
@@ -125,7 +125,7 @@ namespace TaiSanCoDinh.Controllers
                     ct.mathietbi = Convert.ToInt16(key[i]);
                     ct.soluong = Convert.ToInt32(quantity[i]);
                     ct.maphieugiao = pg.maphieugiao;
-                    db.CHITIETPHIEUGIAO.Add(ct);
+                    db.CHITIETPHIEUGIAOs.Add(ct);
                 }
 
                     //phieugiao.ngaygiao = ngay;
@@ -140,18 +140,18 @@ namespace TaiSanCoDinh.Controllers
             }
 
 
-            ViewData["maphongquantri"] = new SelectList(db.PHONGQUANTRI, "maphongquantri", "tenphongquantri");
-            ViewData["madonvi"] = new SelectList(db.DONVI, "madonvi", "tendonvi");
-            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAP, "manhacungcap", "tennhacungcap");
-            ViewBag.ThietBi = db.THIETBI.ToList();
+            ViewData["maphongquantri"] = new SelectList(db.PHONGQUANTRIs, "maphongquantri", "tenphongquantri");
+            ViewData["madonvi"] = new SelectList(db.DONVIs, "madonvi", "tendonvi");
+            ViewData["manhacungcap"] = new SelectList(db.NHACUNGCAPs, "manhacungcap", "tennhacungcap");
+            ViewBag.ThietBi = db.THIETBIs.ToList();
 
-            var model = db.PHIEUGIAO.ToList();
+            var model = db.PHIEUGIAOs.ToList();
             return View("PhieuGiao", model);
         }
 
         public ActionResult ChiTiet(CHITIETPHIEUGIAO maphieugiao )
         {
-            ViewBag.ChiTiet = db.CHITIETPHIEUGIAO.Select(i => i.maphieugiao.Equals(maphieugiao));
+            ViewBag.ChiTiet = db.CHITIETPHIEUGIAOs.Select(i => i.maphieugiao.Equals(maphieugiao));
             //ViewBag.ChiTiet = db.CHITIETPHIEUGIAO.ToList();
 
             return View();

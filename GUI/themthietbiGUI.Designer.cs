@@ -49,13 +49,11 @@
             this.cbphongquantri = new System.Windows.Forms.ComboBox();
             this.cbloaithietbi = new System.Windows.Forms.ComboBox();
             this.rtxbthongso = new System.Windows.Forms.RichTextBox();
-            this.txbsoluong = new System.Windows.Forms.TextBox();
             this.txbdongia = new System.Windows.Forms.TextBox();
             this.txbtenthietbi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -129,8 +127,10 @@
             // 
             // btthem
             // 
+            this.btthem.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthem.Appearance.Options.UseFont = true;
             this.btthem.Image = ((System.Drawing.Image)(resources.GetObject("btthem.Image")));
-            this.btthem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btthem.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
             this.btthem.Location = new System.Drawing.Point(37, 27);
             this.btthem.Name = "btthem";
             this.btthem.Size = new System.Drawing.Size(149, 69);
@@ -140,8 +140,10 @@
             // 
             // btthoat
             // 
+            this.btthoat.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btthoat.Appearance.Options.UseFont = true;
             this.btthoat.Image = ((System.Drawing.Image)(resources.GetObject("btthoat.Image")));
-            this.btthoat.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btthoat.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btthoat.Location = new System.Drawing.Point(118, 112);
             this.btthoat.Name = "btthoat";
             this.btthoat.Size = new System.Drawing.Size(70, 103);
@@ -164,8 +166,10 @@
             // 
             // btnhaplai
             // 
+            this.btnhaplai.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnhaplai.Appearance.Options.UseFont = true;
             this.btnhaplai.Image = ((System.Drawing.Image)(resources.GetObject("btnhaplai.Image")));
-            this.btnhaplai.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnhaplai.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnhaplai.Location = new System.Drawing.Point(37, 112);
             this.btnhaplai.Name = "btnhaplai";
             this.btnhaplai.Size = new System.Drawing.Size(75, 103);
@@ -183,13 +187,11 @@
             this.groupBox1.Controls.Add(this.cbphongquantri);
             this.groupBox1.Controls.Add(this.cbloaithietbi);
             this.groupBox1.Controls.Add(this.rtxbthongso);
-            this.groupBox1.Controls.Add(this.txbsoluong);
             this.groupBox1.Controls.Add(this.txbdongia);
             this.groupBox1.Controls.Add(this.txbtenthietbi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -226,6 +228,7 @@
             this.cbtinhtrang.Name = "cbtinhtrang";
             this.cbtinhtrang.Size = new System.Drawing.Size(183, 24);
             this.cbtinhtrang.TabIndex = 20;
+     
             // 
             // label10
             // 
@@ -243,6 +246,7 @@
             this.cbdonvitinh.Name = "cbdonvitinh";
             this.cbdonvitinh.Size = new System.Drawing.Size(183, 24);
             this.cbdonvitinh.TabIndex = 18;
+
             // 
             // cbphongquantri
             // 
@@ -251,6 +255,7 @@
             this.cbphongquantri.Name = "cbphongquantri";
             this.cbphongquantri.Size = new System.Drawing.Size(183, 24);
             this.cbphongquantri.TabIndex = 17;
+
             // 
             // cbloaithietbi
             // 
@@ -259,22 +264,16 @@
             this.cbloaithietbi.Name = "cbloaithietbi";
             this.cbloaithietbi.Size = new System.Drawing.Size(183, 24);
             this.cbloaithietbi.TabIndex = 16;
+  
             // 
             // rtxbthongso
             // 
-            this.rtxbthongso.Location = new System.Drawing.Point(127, 143);
+            this.rtxbthongso.Location = new System.Drawing.Point(127, 107);
             this.rtxbthongso.Name = "rtxbthongso";
-            this.rtxbthongso.Size = new System.Drawing.Size(183, 39);
+            this.rtxbthongso.Size = new System.Drawing.Size(183, 75);
             this.rtxbthongso.TabIndex = 12;
             this.rtxbthongso.Text = "";
-            // 
-            // txbsoluong
-            // 
-            this.txbsoluong.Location = new System.Drawing.Point(127, 104);
-            this.txbsoluong.Name = "txbsoluong";
-            this.txbsoluong.Size = new System.Drawing.Size(183, 22);
-            this.txbsoluong.TabIndex = 11;
-            this.txbsoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbsoluong_KeyPress);
+
             // 
             // txbdongia
             // 
@@ -290,6 +289,7 @@
             this.txbtenthietbi.Name = "txbtenthietbi";
             this.txbtenthietbi.Size = new System.Drawing.Size(183, 22);
             this.txbtenthietbi.TabIndex = 9;
+           
             this.txbtenthietbi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbtenthietbi_KeyPress);
             // 
             // label9
@@ -319,15 +319,6 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Đơn vị tính";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(61, 16);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Số lượng";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -349,7 +340,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 146);
+            this.label3.Location = new System.Drawing.Point(18, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 16);
             this.label3.TabIndex = 2;
@@ -413,13 +404,11 @@
         private System.Windows.Forms.ComboBox cbphongquantri;
         private System.Windows.Forms.ComboBox cbloaithietbi;
         private System.Windows.Forms.RichTextBox rtxbthongso;
-        private System.Windows.Forms.TextBox txbsoluong;
         private System.Windows.Forms.TextBox txbdongia;
         private System.Windows.Forms.TextBox txbtenthietbi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="TSCDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="TSCDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="CHITIETPHIEUGIAO">
     <Key>
-      <PropertyRef Name="ID" />
+      <PropertyRef Name="mathietbi" />
+      <PropertyRef Name="maphieugiao" />
     </Key>
     <Property Name="mathietbi" Type="int" Nullable="false" />
     <Property Name="maphieugiao" Type="int" Nullable="false" />
     <Property Name="soluong" Type="int" />
-    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
   </EntityType>
   <EntityType Name="DONVI">
     <Key>
@@ -79,13 +79,6 @@
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
-  <EntityType Name="TINHTRANG">
-    <Key>
-      <PropertyRef Name="matinhtrang" />
-    </Key>
-    <Property Name="matinhtrang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="tentinhtrang" Type="nvarchar" MaxLength="100" />
-  </EntityType>
   <EntityType Name="THIETBI">
     <Key>
       <PropertyRef Name="mathietbi" />
@@ -102,6 +95,13 @@
     <Property Name="maloai" Type="int" />
     <Property Name="maphongquantri" Type="int" />
     <Property Name="matinhtrang" Type="int" />
+  </EntityType>
+  <EntityType Name="TINHTRANG">
+    <Key>
+      <PropertyRef Name="matinhtrang" />
+    </Key>
+    <Property Name="matinhtrang" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tentinhtrang" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <Association Name="FK_CHITIETPHIEUGIAO_PHIEUGIAO">
     <End Role="PHIEUGIAO" Type="Self.PHIEUGIAO" Multiplicity="1" />
@@ -245,8 +245,8 @@
     <EntitySet Name="PHIEUNHAP" EntityType="Self.PHIEUNHAP" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PHONGQUANTRI" EntityType="Self.PHONGQUANTRI" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="THIETBI" EntityType="Self.THIETBI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TINHTRANG" EntityType="Self.TINHTRANG" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_CHITIETPHIEUGIAO_PHIEUGIAO" Association="Self.FK_CHITIETPHIEUGIAO_PHIEUGIAO">
       <End Role="PHIEUGIAO" EntitySet="PHIEUGIAO" />
       <End Role="CHITIETPHIEUGIAO" EntitySet="CHITIETPHIEUGIAO" />

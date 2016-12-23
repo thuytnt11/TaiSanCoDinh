@@ -8,6 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 using PUB;
 using BUS;
+using System.Collections.ObjectModel;
+using System.Data.Entity;
 
 namespace GUI
 {
@@ -35,7 +37,9 @@ namespace GUI
             string tentinhtrang = cbtinhtrang.Text;
             int tinhtrang = int.Parse(cbtinhtrang.SelectedValue.ToString());
             DateTime thoidiem = DateTime.Parse(dtthoidiem.Text);
-            griddsthietbi.DataSource = thietbiBUS.dsthietbitt(tinhtrang, thoidiem);
+            List<thietbiPUB> dsthietbi1 = thietbiBUS.dsthietbitt(tinhtrang, thoidiem);
+            var dsthietbi = new ObservableCollection<thietbiPUB>(dsthietbi1).ToBindingList();
+            griddsthietbi.DataSource = dsthietbi;
             lbtong.Text = "Tổng thiết vị : " + griddsthietbi.Rows.Count;
             griddsthietbi.RowHeadersVisible = false;
             griddsthietbi.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -50,6 +54,11 @@ namespace GUI
             griddsthietbi.Columns[8].HeaderText = "Mã loại";
             griddsthietbi.Columns[9].HeaderText = "Mã phòng quản trị";
             griddsthietbi.Columns[10].HeaderText = "Tình trạng";
+        }
+
+        private void griddsthietbi_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            griddsthietbi.Sort(griddsthietbi.Columns[griddsthietbi.Columns[e.ColumnIndex].Name], ListSortDirection.Ascending);
         }
     }
 }

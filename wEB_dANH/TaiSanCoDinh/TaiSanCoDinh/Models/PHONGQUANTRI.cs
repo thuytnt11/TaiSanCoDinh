@@ -14,16 +14,19 @@ namespace TaiSanCoDinh.Models
     
     public partial class PHONGQUANTRI
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PHONGQUANTRI()
         {
-            this.PHIEUGIAO = new HashSet<PHIEUGIAO>();
-            this.THIETBI = new HashSet<THIETBI>();
+            this.PHIEUGIAOs = new HashSet<PHIEUGIAO>();
+            this.THIETBIs = new HashSet<THIETBI>();
         }
     
         public int maphongquantri { get; set; }
         public string tenphongquantri { get; set; }
     
-        public virtual ICollection<PHIEUGIAO> PHIEUGIAO { get; set; }
-        public virtual ICollection<THIETBI> THIETBI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PHIEUGIAO> PHIEUGIAOs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THIETBI> THIETBIs { get; set; }
     }
 }

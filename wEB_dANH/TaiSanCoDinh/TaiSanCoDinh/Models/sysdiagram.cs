@@ -12,13 +12,12 @@ namespace TaiSanCoDinh.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class CHITIETPHIEUGIAO
+    public partial class sysdiagram
     {
-        public int mathietbi { get; set; }
-        public int maphieugiao { get; set; }
-        public Nullable<int> soluong { get; set; }
-    
-        public virtual PHIEUGIAO PHIEUGIAO { get; set; }
-        public virtual THIETBI THIETBI { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
