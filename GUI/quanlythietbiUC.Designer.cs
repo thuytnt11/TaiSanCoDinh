@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(quanlythietbiUC));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txbdongia = new System.Windows.Forms.TextBox();
             this.txbngaycapnhat = new System.Windows.Forms.DateTimePicker();
             this.txbngaysudung = new System.Windows.Forms.DateTimePicker();
             this.txbngaysanxuat = new System.Windows.Forms.DateTimePicker();
@@ -41,7 +42,6 @@
             this.cbloaithietbi = new System.Windows.Forms.ComboBox();
             this.rtxbthongso = new System.Windows.Forms.RichTextBox();
             this.txbsoluong = new System.Windows.Forms.TextBox();
-            this.txbdongia = new System.Windows.Forms.TextBox();
             this.txbtenthietbi = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -73,6 +73,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txbdongia);
             this.groupBox1.Controls.Add(this.txbngaycapnhat);
             this.groupBox1.Controls.Add(this.txbngaysudung);
             this.groupBox1.Controls.Add(this.txbngaysanxuat);
@@ -84,7 +85,6 @@
             this.groupBox1.Controls.Add(this.cbloaithietbi);
             this.groupBox1.Controls.Add(this.rtxbthongso);
             this.groupBox1.Controls.Add(this.txbsoluong);
-            this.groupBox1.Controls.Add(this.txbdongia);
             this.groupBox1.Controls.Add(this.txbtenthietbi);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -102,6 +102,15 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thiết bị";
+            // 
+            // txbdongia
+            // 
+            this.txbdongia.Location = new System.Drawing.Point(127, 67);
+            this.txbdongia.Name = "txbdongia";
+            this.txbdongia.Size = new System.Drawing.Size(183, 22);
+            this.txbdongia.TabIndex = 26;
+            this.txbdongia.MouseLeave += new System.EventHandler(this.txbdongia_MouseLeave);
+            this.txbdongia.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txbdongia_MouseMove);
             // 
             // txbngaycapnhat
             // 
@@ -195,14 +204,6 @@
             this.txbsoluong.Size = new System.Drawing.Size(183, 22);
             this.txbsoluong.TabIndex = 11;
             this.txbsoluong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbsoluong_KeyPress);
-            // 
-            // txbdongia
-            // 
-            this.txbdongia.Location = new System.Drawing.Point(127, 67);
-            this.txbdongia.Name = "txbdongia";
-            this.txbdongia.Size = new System.Drawing.Size(183, 22);
-            this.txbdongia.TabIndex = 10;
-            this.txbdongia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbdongia_KeyPress);
             // 
             // txbtenthietbi
             // 
@@ -466,7 +467,6 @@
         private System.Windows.Forms.ComboBox cbloaithietbi;
         private System.Windows.Forms.RichTextBox rtxbthongso;
         private System.Windows.Forms.TextBox txbsoluong;
-        private System.Windows.Forms.TextBox txbdongia;
         private System.Windows.Forms.TextBox txbtenthietbi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -492,5 +492,6 @@
         private System.Windows.Forms.TextBox txbtim;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView griddsthietbi;
+        private System.Windows.Forms.TextBox txbdongia;
     }
 }

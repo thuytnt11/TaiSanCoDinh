@@ -50,7 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="donvitinhPUB.cs" />
-    <Compile Include="dskho.cs" />
     <Compile Include="loaithietbiPUB.cs" />
     <Compile Include="phongquantriPUB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

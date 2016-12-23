@@ -36,18 +36,23 @@ namespace DAL
                 return dstb;
             }
         }
-        public static List<dskho> dsthietbikho(DateTime thoidiem)
+        public static List<thietbiPUB> dsthietbikho(DateTime thoidiem)
         {
-            List<dskho> dstb = new List<dskho>();
+            List<thietbiPUB> dstb = new List<thietbiPUB>();
             using (TSCDEntities t = new TSCDEntities())
             {
                 var query = from s in t.THIETBIs
                             select s;
                 foreach (var row in query)
                 {
-                    dskho tb = new dskho();
+                    thietbiPUB tb = new thietbiPUB();
                     tb.Mathietbi = row.mathietbi;
                     tb.Tenthietbi = row.tenthietbi;
+                    tb.Dongia = row.dongia;
+                    tb.Thongsokythuat = row.thongsokythuat;
+                    tb.Ngaysanxuat = row.ngaysanxuat;
+                    tb.Ngayduavaosudung = row.ngayduavaosudung;
+                    tb.Ngaycapnhat = row.ngaycapnhat;
                     //tính số lượng tồn
                     int soluongnhap = 0;
                     try
@@ -62,7 +67,22 @@ namespace DAL
                     }
                     catch { }
                     //tính số lượng xong
-                    tb.Soluong = soluongnhap - soluongxuat;
+                    if (soluongnhap == 0)
+                    {
+                        tb.Soluong = 0;
+                    }
+                    if(soluongnhap != 0 && soluongxuat ==0)
+                    {
+                        tb.Soluong = soluongnhap;
+                    }
+                    else
+                    {
+                        tb.Soluong = soluongnhap - soluongxuat;
+                    }
+                    tb.Madonvitinh = row.madonvitinh;
+                    tb.Maloai = row.maloai;
+                    tb.Maphongquantri = row.maphongquantri;
+                    tb.Matinhtrang = row.matinhtrang;
                     dstb.Add(tb);
                 }
                 return dstb;

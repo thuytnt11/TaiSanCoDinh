@@ -29,23 +29,29 @@ namespace GUI
         {
             txbmathietbi.Text = griddsthietbi.CurrentRow.Cells[0].Value.ToString();
             txbtenthietbi.Text = griddsthietbi.CurrentRow.Cells[1].Value.ToString();
-            lbsoluongton.Text = griddsthietbi.CurrentRow.Cells[2].Value.ToString();
+            lbsoluongton.Text = griddsthietbi.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             DateTime thoidiem = DateTime.Parse(dateTimePicker1.Text);
-            List<dskho> dsthietbitk1 = BUS.thietbiBUS.dsthietbikho(thoidiem);
-            var dsthietbitk = new ObservableCollection<dskho>(dsthietbitk1).ToBindingList();
-            griddsthietbi.DataSource = dsthietbitk;
+            List<thietbiPUB> dsthietbi1 = BUS.thietbiBUS.dsthietbikho(thoidiem);
+            var dsthietbi = new ObservableCollection<thietbiPUB>(dsthietbi1).ToBindingList();
+            griddsthietbi.DataSource = dsthietbi;
             griddsthietbi.RowHeadersVisible = false;
-            griddsthietbi.Columns[0].Width = 350;
-            griddsthietbi.Columns[1].Width = 350;
-            griddsthietbi.Columns[2].Width = 350;
             griddsthietbi.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             griddsthietbi.Columns[0].HeaderText = "Mã thiết bị";
             griddsthietbi.Columns[1].HeaderText = "Tên thiết bị";
-            griddsthietbi.Columns[2].HeaderText = "Số lượng tồn kho";
+            griddsthietbi.Columns[2].HeaderText = "Đơn giá";
+            griddsthietbi.Columns[3].HeaderText = "Thông số kỹ thuật";
+            griddsthietbi.Columns[4].HeaderText = "Ngày sản xuất";
+            griddsthietbi.Columns[5].HeaderText = "Ngày đưa vào sử dụng";
+            griddsthietbi.Columns[6].HeaderText = "Số lượng";
+            griddsthietbi.Columns[7].HeaderText = "Mã đơn vị tính";
+            griddsthietbi.Columns[8].HeaderText = "Mã loại";
+            griddsthietbi.Columns[9].HeaderText = "Mã phòng quản trị";
+            griddsthietbi.Columns[10].HeaderText = "Tình trạng";
+            griddsthietbi.Columns[11].HeaderText = "Ngày cập nhật";
         }
     }
 }

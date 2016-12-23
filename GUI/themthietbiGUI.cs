@@ -142,7 +142,7 @@ namespace GUI
             if (!char.IsNumber(e.KeyChar) && !(e.KeyChar == (char)8))
             {
                 e.Handled = true;
-                AutoClosingMessageBox.Show("Vui lòng chỉ nhập số", "TRỢ GIÚP",1000);
+                AutoClosingMessageBox.Show("Vui lòng chỉ nhập số nguyên dương", "TRỢ GIÚP",1000);
             }
         }
 

@@ -114,11 +114,10 @@ namespace TaiSanCoDinh.Controllers
             try
             {
                 DateTime ngay = Convert.ToDateTime(form["ngaygiao"]);
-                string soluong = form["soluong"];
+                int soluong = Convert.ToInt16(form["soluong"]);
                 string mathietbi = form["mathietbi"];
                 string tenthietbi = form["tenthietbi"];
 
-                string[] quantity = soluong.Split(',');
                 string[] key = mathietbi.Split(',');
                 string[] name = tenthietbi.Split(',');
 
@@ -131,20 +130,19 @@ namespace TaiSanCoDinh.Controllers
                 
                 db.PHIEUGIAOs.Add(pg);
                 db.SaveChanges();
-
+                CHITIETPHIEUGIAO ct = new CHITIETPHIEUGIAO();
                 for (int i = 0; i < key.Length; i++)
                 {
-                    CHITIETPHIEUGIAO ct = new CHITIETPHIEUGIAO();
                     ct.mathietbi = Convert.ToInt16(key[i]);
-                    ct.soluong = Convert.ToInt32(quantity[i]);
+                    ct.soluong = Convert.ToInt32(soluong);
                     ct.maphieugiao = pg.maphieugiao;
                     db.CHITIETPHIEUGIAOs.Add(ct);
                 }
 
-                    //phieugiao.ngaygiao = ngay;
-                    //db.PHIEUGIAO.Add(phieugiao);
+                var model11 = db.THIETBIs.Find(ct.mathietbi);
+                model11.soluong -= soluong;
 
-                    db.SaveChanges();
+                db.SaveChanges();
                 ModelState.AddModelError(" ", "Giao Thành Công!!!");
             }
             catch

@@ -13,7 +13,7 @@ namespace BUS
         {
             return DAL.thietbiDAL.dsthietbi();
         }
-        public static List<dskho> dsthietbikho(DateTime thoidiem)
+        public static List<thietbiPUB> dsthietbikho(DateTime thoidiem)
         {
             return DAL.thietbiDAL.dsthietbikho(thoidiem);
         }

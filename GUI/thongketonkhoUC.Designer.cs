@@ -57,6 +57,7 @@
             // 
             // griddsthietbi
             // 
+            this.griddsthietbi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.griddsthietbi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.griddsthietbi.Location = new System.Drawing.Point(4, 260);
             this.griddsthietbi.Name = "griddsthietbi";
